@@ -120,14 +120,14 @@ const Navbar: React.FC = () => {
         setOpenDropdown((prev) => (prev === itemLabel ? null : itemLabel));
     };
 
-    // 👈 NEW: Function to handle dropdown link clicks
+    //  NEW: Function to handle dropdown link clicks
     const handleDropdownLinkClick = () => {
         setOpenDropdown(null);
         setIsMobileMenuOpen(false);
     };
 
     return (
-        <nav className={`bg-white border-b border-gray-200 sticky top-0 z-50   transition-all duration-300`}>
+        <nav className={` bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-50   transition-all duration-300`}>
             <div className={`mx-auto px-4 sm:px-6 lg:px-8  `}>
                 <div className="flex justify-between items-center md:h-15">
                     {/* Logo */}
@@ -136,7 +136,8 @@ const Navbar: React.FC = () => {
                             href="/"
                             className={`font-bold tracking-wide text-black transition-all duration-300`}
                         >
-                            <span className="hidden sm:inline text-2xl">SEA TECHNOLOGIES</span>
+                            <span className="hidden sm:inline text-2xl text">SEA </span>
+                               <span className="hidden sm:inline text-2xl text-blue-400">  TECHNOLOGIES</span>
                             <span className="sm:hidden">SeaTech</span>
                         </Link>
                     </div>
@@ -257,14 +258,14 @@ const Navbar: React.FC = () => {
                                             )}
                                         </button>
 
-                                        {/* 👈 FIXED: Mobile Dropdown Content */}
+                                        {/*   Mobile Dropdown Content */}
                                         {item.hasDropdown && item.dropdownItems && openDropdown === item.label && (
                                             <div className="pl-4 bg-gray-50 border-l-2 border-gray-200">
                                                 {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                                                     <Link
                                                         key={dropdownIndex}
                                                         href={dropdownItem.href}
-                                                        onClick={handleDropdownLinkClick} // 👈 FIXED: Use specific handler
+                                                        onClick={handleDropdownLinkClick} //   Use specific handler
                                                         className="block  px-3 py-2 text-sm text-gray-600 hover:text-black hover:bg-gray-100 transition-colors duration-150"
                                                     >
                                                         {dropdownItem.label}
