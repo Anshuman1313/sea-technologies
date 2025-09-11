@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { X, Menu, ChevronDown } from 'lucide-react';
+import Ep2 from "@/components/practicemotion/Ep2";
 
 interface DropdownItem {
     label: string;
@@ -127,7 +128,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className={` bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-50   transition-all duration-300`}>
+        <nav className={`  ${scrolled ? "bg-white/80 shadow-xl "  : "bg-white/10"} backdrop-blur-md border-b border-white/20 sticky top-0 z-50   transition-all duration-300`}>
             <div className={`mx-auto px-4 sm:px-6 lg:px-8  `}>
                 <div className="flex justify-between items-center md:h-15">
                     {/* Logo */}
@@ -136,9 +137,7 @@ const Navbar: React.FC = () => {
                             href="/"
                             className={`font-bold tracking-wide text-black transition-all duration-300`}
                         >
-                            <span className="hidden sm:inline text-2xl text">SEA </span>
-                               <span className="hidden sm:inline text-2xl text-blue-400">  TECHNOLOGIES</span>
-                            <span className="sm:hidden">SeaTech</span>
+                           <Ep2/>
                         </Link>
                     </div>
 
@@ -206,9 +205,9 @@ const Navbar: React.FC = () => {
                     <div className="hidden md:block">
                         <Link
                             href="/contact"
-                            className="bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 inline-block"
+                            className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 inline-block"
                         >
-                            Get Started
+                            Free Consultancy
                         </Link>
                     </div>
 
@@ -283,9 +282,9 @@ const Navbar: React.FC = () => {
                             <Link
                                 href="/contact"
                                 onClick={closeMobileMenu}
-                                className="bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 w-full block text-center"
+                                className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 w-full block text-center"
                             >
-                                Get Started
+                                Free Consultancy
                             </Link>
                         </div>
                     </div>
