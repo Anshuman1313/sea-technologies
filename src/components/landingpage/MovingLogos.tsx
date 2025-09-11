@@ -83,7 +83,7 @@ const logos = [
 const LogoCard = ({ img, name }: { img: string; name: string }) => {
   return (
     <div className="flex items-center justify-center w-32 h-20 grayscale hover:grayscale-0 transition">
-      <img src={img} alt={name} className="max-h-15 object-contain" />
+      <img src={img} alt={name} className="max-h-18 object-contain" />
     </div>
   );
 };
@@ -91,16 +91,10 @@ const LogoCard = ({ img, name }: { img: string; name: string }) => {
 export function MovingLogos() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-    {/* <h2 className="text-xl font-medium mb-3">TRUSTED BY TEAMS FROM AROUND THE WORLD</h2>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee> */}
-          <h2 className="text-xl font-semibold mb-6">
+          <h2 className="text-xl text-neutral-700 font-semibold pb-15">
         Trusted by fast-growing startups
       </h2>
-      <Marquee pauseOnHover className="[--duration:15s]">
+      <Marquee  className="[--duration:25s]">
         {logos.map((logo) => (
           <LogoCard key={logo.name} {...logo} />
         ))}
@@ -110,3 +104,10 @@ export function MovingLogos() {
     </div>
   );
 }
+
+    {/* <h2 className="text-xl font-medium mb-3">TRUSTED BY TEAMS FROM AROUND THE WORLD</h2>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {secondRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee> */}
