@@ -3,7 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { X, Menu, ChevronDown } from 'lucide-react';
-import Ep2 from "@/components/practicemotion/Ep2";
+import Ep2 from "@/components/practicemotion/LogoAnimation";
+import LogoAnimation from '@/components/practicemotion/LogoAnimation';
 
 interface DropdownItem {
     label: string;
@@ -137,7 +138,13 @@ const Navbar: React.FC = () => {
                             href="/"
                             className={`font-bold tracking-wide text-black transition-all duration-300`}
                         >
-                           <Ep2/>
+                           <div className='hidden md:block'>
+                            
+                            <LogoAnimation/>
+                            </div>
+                            <div className='md:hidden text-xl'>
+                                <span>SEA</span> <span className='text-blue-400'> TECHNOLOGIES</span>
+                            </div>
                         </Link>
                     </div>
 

@@ -16,7 +16,7 @@ function useMediaQuery(query: string) {
   return matches
 }
 
-export default function SeaTechScrollOnce() {
+export default function LogoAnimation() {
   const [activated, setActivated] = useState(false)
   const { scrollY } = useScroll()
 
@@ -44,7 +44,7 @@ export default function SeaTechScrollOnce() {
         return (
           <motion.span
             key={idx}
-            className={`inline-block ${inSEA ? 'text-black' : inTECH ? 'text-blue-400' : ''} ${activated && isS && ' m-0' }`}
+            className={`inline-block   ${inSEA ? 'text-black' : inTECH ? 'text-blue-400' : ''} ${activated && isS && ' m-0' }`}
             initial={false}
             animate={{
               opacity: activated && shouldFade ? 0 : 1,
