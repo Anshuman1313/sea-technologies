@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { BackgroundGraphics } from "../practicemotion/background-graphics";
 import { Button } from "../ui/button";
 import { MovingLogos } from "./MovingLogos";
+import OceanLinesBackground from "../practicemotion/SvgLines/OceanLines";
 
 export function AnimatedHeroSection() {
   const containerRef = useRef<HTMLElement>(null);
@@ -21,6 +22,7 @@ export function AnimatedHeroSection() {
       className="min-h-screen flex items-center justify-center px-6 py-12 bg-gradient-to-b from-background to-background/50 relative overflow-hidden"
     >
       <BackgroundGraphics />
+      {/* <OceanLinesBackground/> */}
       <motion.div 
         className="max-w-4xl mx-auto text-center space-y-8 relative z-10"
         style={{ y, opacity }}
@@ -78,7 +80,7 @@ export function AnimatedHeroSection() {
           >
             Start Your Journey
             <motion.div
-              className="ml-2"
+              className="pb-[2px] md:ml-2"
               animate={{ x: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >

@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { X, Menu, ChevronDown } from 'lucide-react';
 import Ep2 from "@/components/practicemotion/LogoAnimation";
 import LogoAnimation from '@/components/practicemotion/LogoAnimation';
+import { motion } from 'motion/react';
+import { Button } from '../ui/button';
 
 interface DropdownItem {
     label: string;
@@ -129,9 +131,9 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className={`  ${scrolled ? "bg-white/80 shadow-xl "  : "bg-white/10"} backdrop-blur-md border-b border-white/20 sticky top-0 z-50   transition-all duration-300`}>
+        <nav className={`  ${scrolled ? "bg-white/80 shadow-xl "  : "bg-white/10"} backdrop-blur-md border-b border-white/20 sticky top-0 z-50    transition-all duration-300`}>
             <div className={`mx-auto px-4 sm:px-6 lg:px-8  `}>
-                <div className="flex justify-between items-center md:h-15">
+                <div className="flex justify-between items-center h-13 md:h-15">
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link
@@ -219,7 +221,8 @@ const Navbar: React.FC = () => {
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center gap-2">
+                           <Button >Start</Button>
                         <button
                             onClick={toggleMobileMenu}
                             className="text-gray-700 hover:text-black focus:outline-none focus:text-black p-2"
@@ -234,6 +237,7 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </div>
+            
 
             {/* Mobile Navigation Menu */}
             {isMobileMenuOpen && (
