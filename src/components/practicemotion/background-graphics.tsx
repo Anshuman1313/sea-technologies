@@ -4,10 +4,10 @@ import { useEffect } from "react";
 export function BackgroundGraphics() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  
+
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
   const springY = useSpring(mouseY, { stiffness: 100, damping: 30 });
-  
+
   // Transform mouse position to subtle parallax values
   const parallaxX1 = useTransform(springX, [0, 1], [0, 15]);
   const parallaxY1 = useTransform(springY, [0, 1], [0, 10]);
@@ -30,11 +30,11 @@ export function BackgroundGraphics() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
+      <div className="absolute inset-0 opacity-[0.03]">
         <svg width="100%" height="100%" className="absolute inset-0">
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
@@ -42,56 +42,68 @@ export function BackgroundGraphics() {
       </div>
 
       {/* Animated connecting lines */}
-      <motion.svg 
-        className="absolute inset-0 w-full h-full" 
+      <motion.svg
+        className="absolute inset-0 w-full h-full"
         viewBox="0 0 1200 800"
         style={{ x: parallaxX1, y: parallaxY1 }}
       >
         <defs>
-          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="currentColor" stopOpacity="0" />
-            <stop offset="50%" stopColor="currentColor" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
-          </linearGradient>
+          <motion.linearGradient
+            id="lineGradient"
+            gradientUnits="userSpaceOnUse"
+            initial={{ x1: "0%", x2: "10%" }}
+            animate={{ x1: "90%", x2: "100%" }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            }}
+          >
+            <stop offset="0" stopColor="#f5f5f5" /> {/* neutral-100 */}
+            <stop offset="0.5" stopColor="#3B82F6" /> {/* blue-500 */}
+            <stop offset="1" stopColor="#f5f5f5" /> {/* neutral-100 */}
+          </motion.linearGradient>
         </defs>
-        
+
         {/* Flowing lines */}
         <motion.path
-          d="M-100,200 Q300,100 600,200 T1300,150"
+          d="M-100 100q400-100 700 0t700-50"
           fill="none"
           stroke="url(#lineGradient)"
-          strokeWidth="2"
+          strokeWidth="1"
           className="text-primary/20"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 3, delay: 1, ease: "easeInOut" }}
         />
-        
         <motion.path
           d="M-100,600 Q200,500 500,550 T1300,500"
           fill="none"
           stroke="url(#lineGradient)"
-          strokeWidth="1.5"
+          strokeWidth="2"
           className="text-primary/15"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 3.5, delay: 1.5, ease: "easeInOut" }}
         />
-          
+
         <motion.path
           d="M-100,400 Q400,350 700,380 T1300,320"
           fill="none"
           stroke="url(#lineGradient)"
           strokeWidth="1"
-          className="text-primary/10"
+          className="text-primary/10 "
+           transform="translate(0, -50)" 
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 4, delay: 2, ease: "easeInOut" }}
+
         />
       </motion.svg>
 
       {/* Floating dots with connections */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0"
         style={{ x: parallaxX2, y: parallaxY2 }}
       >
@@ -184,7 +196,7 @@ export function BackgroundGraphics() {
       </motion.div>
 
       {/* Subtle graph-like elements */}
-      <motion.div 
+      <motion.div
         className="absolute top-1/4 right-1/4 opacity-10"
         style={{ x: parallaxX3, y: parallaxY3 }}
       >
@@ -210,7 +222,7 @@ export function BackgroundGraphics() {
         </motion.div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="absolute bottom-1/3 left-1/4 opacity-8"
         style={{ x: parallaxX1, y: parallaxY1 }}
       >

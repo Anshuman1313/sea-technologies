@@ -97,6 +97,11 @@ body {
   margin: 0;
   padding: 0;
 }
+@theme {
+  --color-line: var(--color-neutral-200)
+  --geist-foreground: var(--color-foreground);
+  --geist-background: var(--color-background);
+}
 
 :root {
   --radius: 0.625rem;
