@@ -5,6 +5,7 @@ import { BackgroundGraphics } from "../practicemotion/background-graphics";
 import { Button } from "../ui/button";
 import { MovingLogos } from "./MovingLogos";
 import OceanLinesBackground from "../practicemotion/SvgLines/OceanLines";
+import LogoSection from "./LogoSection";
 
 export function AnimatedHeroSection() {
   const containerRef = useRef<HTMLElement>(null);
@@ -19,7 +20,7 @@ export function AnimatedHeroSection() {
   return (
     <section 
       ref={containerRef}
-      className="min-h-screen flex items-center justify-center px-6 py-12 bg-gradient-to-b from-background to-background/50 relative overflow-hidden"
+      className="min-h-screen  flex items-center justify-center px-6 py-12 bg-gradient-to-b from-background to-background/50 relative overflow-hidden"
     >
       <BackgroundGraphics />
       {/* <OceanLinesBackground/> */}
@@ -31,7 +32,7 @@ export function AnimatedHeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6"
+          className="space-y-6 "
         >
           <div className="space-y-4">
             <motion.div
@@ -101,17 +102,11 @@ export function AnimatedHeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="pt-12"
+          className="pt-12 relative"
         >
-          <p className="text-sm text-muted-foreground/60">
+          <div className="text-sm md:text-2xl font-semibold text-gray-700 bg-white absolute inset-x-0 mt-15 ">
             Trusted by innovative companies worldwide
-          </p>
-          {/* <div className="flex justify-center items-center gap-8 mt-6 opacity-40">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="w-20 h-8 bg-muted rounded animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}></div>
-            ))}
-          </div> */}
-          {/* <MovingLogos/> */}
+          </div>
         </motion.div>
       </motion.div>
     </section>
