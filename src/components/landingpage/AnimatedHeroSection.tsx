@@ -104,7 +104,7 @@ export function AnimatedHeroSection() {
           transition={{ duration: 1, delay: 0.8 }}
           className="pt-12 relative"
         >
-          <div className="text-sm md:text-2xl font-semibold text-gray-700 bg-white absolute inset-x-0 mt-15 ">
+          <div className="text-lg md:text-2xl font-semibold text-gray-700 bg-white absolute inset-x-0 md:mt-15 ">
             Trusted by innovative companies worldwide
           </div>
         </motion.div>
