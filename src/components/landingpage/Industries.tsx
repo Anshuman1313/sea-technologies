@@ -1,6 +1,7 @@
-import { ArrowRight, Banknote, Building, Code, CreditCard, HeartPulse, Wallet } from "lucide-react";
+import { ArrowRight, Banknote, Building, Code, CreditCard, Factory, HeartPulse, Plane, ShieldCheck, Wallet } from "lucide-react";
 import { CpuLines } from "../practicemotion/SvgLines/CpuLines";
 import { useRef, useState, useEffect } from "react";
+import IndustryGrid from "../practicemotion/SvgLines/IndustryCpuLines";
 
 interface CardPosition {
   x: number;
@@ -22,11 +23,11 @@ export function Industries() {
 
       const containerRect = containerRef.current.getBoundingClientRect();
       const svgContainer = containerRef.current.querySelector('.mx-5');
-      
+
       if (!svgContainer) return;
 
       const svgRect = svgContainer.getBoundingClientRect();
-      
+
       // Calculate scale factors
       const scaleX = svgRect.width / SVG_VIEWBOX.width;
       const scaleY = svgRect.height / SVG_VIEWBOX.height;
@@ -40,7 +41,7 @@ export function Industries() {
 
     // Initial calculation
     calculateCenterPosition();
-    
+
     // Setup resize observer
     const resizeObserver = new ResizeObserver(calculateCenterPosition);
     if (containerRef.current) {
@@ -57,49 +58,58 @@ export function Industries() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-2">
-      <div 
-        ref={containerRef} 
-        className="max-w-5xl mx-auto px-7 relative mt-30 overflow-visible"
-      >
-        <div className="mx-5">
-          <CpuLines />
-        </div>
+    <>
 
-        {/* SEA TECH Card - Centered on SVG */}
-        <div 
-          className="p-4 rounded-lg bg-white absolute shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-10 border border-gray-100"
-          style={{
-            left: `${centerPosition.x}px`,
-            top: `${centerPosition.y}px`,
-            minWidth: '240px',
-            textAlign: 'center',
-          }}
-        >
-          <div>
-            <span className="text-black font-semibold text-lg">SEA</span>
-            <span className="text-blue-500 mx-1 font-semibold text-lg">TECH</span>
-          </div>
-          <div className="text-xs text-gray-500 mt-1">Central Hub</div>
-        </div>
-
-        {/* Bottom Static Cards */}
-        <div className="flex gap-20 justify-center ">
-          {industries.map((item) => (
-            <div key={item.title} className="p-4 shadow rounded-lg bg-white max-w-xs">
-              <item.icon className="text-blue-500 mb-2" size={20} />
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="text-sm text-neutral-600">{item.description}</p>
-            </div>
-          ))}
-        </div>
+      <div className={`text-center max-w-4xl mx-auto px-4 py-16 `}>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          Your Technology Partner for Growth
+        </h2>
+        <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          Specialized solutions across key industries, backed by expertise that understands your business
+        </p>
       </div>
-    </div>
+
+      <div className="flex flex-col mb-10 ">
+        {/* Top Industries */}
+        <IndustryGrid industries={industriesTop} />
+
+        {/* Svg lines and the centered sea tracker */}
+        <div
+          ref={containerRef}
+          className="max-w-5xl mx-auto px-7 relative  overflow-visible"
+        >
+          <div className="mx-5">
+            <CpuLines />
+          </div>
+
+          {/* SEA TECH Card - Centered on SVG */}
+          <div
+            className=" rounded-sm p-4 bg-white  absolute shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-10 border border-gray-100"
+            style={{
+              left: `${centerPosition.x + 40}px`,
+              top: `${centerPosition.y + 10}px`,
+              minWidth: '240px',
+              textAlign: 'center',
+            }}
+          >
+            <div>
+              <span className="text-black font-bold text-lg">SEA</span>
+              <span className="text-blue-500 mx-1 font-bold text-lg">TECHNOLOGIES</span>
+            </div>
+          </div>
+
+
+        </div>
+
+        {/* Bottom cards */}
+        <IndustryGrid industries={industriesBottom} />
+      </div>
+    </>
   );
 }
 
-// Your existing industries array...
-export const industries = [
+
+export const industriesBottom = [
   {
     title: "Real Estate",
     description: "Solutions for property management, smart housing, construction, and digital real estate platforms.",
@@ -107,7 +117,7 @@ export const industries = [
     icon: Building,
   },
   {
-    title: "Banking", 
+    title: "Banking",
     description: "Digital banking, core banking solutions, fraud detection, and secure financial services.",
     link: "/industries/banking",
     icon: Banknote,
@@ -115,7 +125,27 @@ export const industries = [
   {
     title: "Healthcare",
     description: "Healthcare management systems, telemedicine, patient record management, and digital diagnostics.",
-    link: "/industries/healthcare", 
+    link: "/industries/healthcare",
     icon: HeartPulse,
+  },
+];
+export const industriesTop = [
+  {
+    title: "Travel & Hospitality",
+    description: "Booking engines, guest management, personalized experiences, and smart travel planning.",
+    link: "/industries/travel-hospitality",
+    icon: Plane,
+  },
+  {
+    title: "Manufacturing",
+    description: "IoT-driven factories, predictive maintenance, robotics automation, and production analytics.",
+    link: "/industries/manufacturing",
+    icon: Factory,
+  },
+  {
+    title: "Insurance",
+    description: "Policy management systems, claim automation, fraud detection, and risk assessment tools.",
+    link: "/industries/insurance",
+    icon: ShieldCheck,
   },
 ];
