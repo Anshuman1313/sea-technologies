@@ -6,16 +6,19 @@ import type { FC, SVGProps } from "react";
 export const CpuLines: FC<SVGProps<SVGSVGElement>> = (props) => {
   const pathsBottomLeft = [
     "M380 140 L5.00002 140 Q 1.00001 140 1.00001 144 L1.00001 264", // bottom left outside
-    "M388 184 L388 180 Q 389 198 388 198 L77 198 Q 73 198 73 202 L73 264", // bottom left inside
+    "M388 184 L388 100 Q 389 198 388 198 L77 198 Q 73 198 73 202 L73 264", // bottom left inside
   ];
 
   const pathsTop = [
-    "M460 125 L460 20 Q 460 16 464 16 L600 16", // top (middle left)
-    "M436 125 L436 0", // top center
+   
+    "M426 125 L426 0", // top center
   ];
+  const pathsTopright = [
+     "M460 125 459 75Q459 71 463 70 L880 67 Q880 67 880 0",// top (middle right)
+  ] 
 
   const pathsTopLeft = [
-    "M388 125 L388 20 Q 388 16 384 16 L250 16", // top left
+    "M388 125 L388 40 Q 388 40 384 40 L0 40 Q 1 16 0 0", // top left
   ];
 
 
@@ -48,6 +51,15 @@ export const CpuLines: FC<SVGProps<SVGSVGElement>> = (props) => {
             <g key={`bottom-left-${i}`}>
               <path d={d} stroke="black" strokeOpacity="0.1" />
               <path d={d} stroke="url(#cpuLineGradientLeft)" />
+            </g>
+          ))}
+        </g>
+        {/* Top Right Paths */}
+        <g fill="none" strokeWidth="2" strokeLinecap="round">
+          {pathsTopright.map((d, i) => (
+            <g key={`bottom-left-${i}`}>
+              <path d={d} stroke="black" strokeOpacity="0.1" />
+              <path d={d} stroke="url(#cpuLineGradientRight)" />
             </g>
           ))}
         </g>
