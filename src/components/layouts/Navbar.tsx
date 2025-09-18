@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
                 { label: 'Our Story', href: '/about/story', description: 'Who we are & our journey' },
                 { label: 'Leadership', href: '/about/leadership', description: 'Meet our core team' },
                 { label: 'Careers', href: '/about/careers', description: 'Join SeaTechnologies' },
-                { label: 'Contact Us', href: '/about/contact', description: 'Lets build together' }
+                { label: 'Contact Us', href: '/about/contactus', description: 'Lets build together' }
             ]
         },
     ];
@@ -213,7 +213,7 @@ const Navbar: React.FC = () => {
                     {/* Desktop CTA Button */}
                     <div className="hidden md:block">
                         <Link
-                            href="/contact"
+                            href="/contactus"
                             className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 inline-block"
                         >
                             Free Consultancy
@@ -291,7 +291,7 @@ const Navbar: React.FC = () => {
                         {/* Mobile CTA Button */}
                         <div className="pt-4 pb-2 px-3">
                             <Link
-                                href="/contact"
+                                href="/contactus"
                                 onClick={closeMobileMenu}
                                 className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 w-full block text-center"
                             >

@@ -41,8 +41,8 @@ const LogoSection = () => {
     }, []);
 
     return (
-        <div className="flex flex-col w-full ">
-            <div className="grid grid-cols-4 ">
+        <div className="flex flex-col md:w-full   ">
+            <div className="grid grid-cols-2 md:grid-cols-4 ">
                 {visibleNumbers.map((num:any,i:any) => (
                     <motion.div
                         whileHover="animate"
@@ -56,10 +56,10 @@ const LogoSection = () => {
                             }}
                             initial={{ y: 100 }}
 
-                            className="size-full absolute bg-neutral-100"
+                            className="size-full absolute bg-neutral-100 "
                         />
 
-                        <motion.span
+                        <motion.div
                             key={num}
                             initial={{ y: -100}}
                             animate={{
@@ -71,17 +71,17 @@ const LogoSection = () => {
                                 opacity: 0,
                                 transition: { duration: 0.3, ease: "easeInOut" }
                             }}
-                            className="relative z-10 "
+                            className="relative z-10 overflow-hidden  h-25 w-40  "
                         >
                            <Image
                            src={`/logos2/logo${num}.png`}
-                           alt={`Logo ${num}`}
+                           alt={`Logo ${i}`}
                            height={80}
                            width={160}
-                           className="object-contain p-8"
+                           className="object-contain p-8 "
                            />
                          
-                        </motion.span>
+                        </motion.div>
 
 
                     </motion.div>

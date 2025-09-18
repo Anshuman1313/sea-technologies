@@ -5,6 +5,7 @@ import { Industries } from "@/components/landingpage/Industries";
 import LogoSection from "@/components/landingpage/LogoSection";
 import { MovingLogos } from "@/components/landingpage/MovingLogos";
 import Navbar from "@/components/layouts/Navbar";
+import { CpuLines2 } from "@/components/practicemotion/SvgLines/CpuLines2";
 import { div } from "motion/react-client";
 
 export default function Home() {
@@ -15,9 +16,10 @@ export default function Home() {
           
           <AnimatedHeroSection />
        
-        <div className="bg-white  md:px-10 md:pb-10  ">
+        <div className="bg-white  md:px-10 md:pb-17 border-b-[1px] border-neutral-200 ">
           <LogoSection/>
         </div>
+           
         <div className="bg-white ">
           <Industries />
         </div>
