@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layouts/Footer";
 import Banner from "@/components/landingpage/Banner";
+import { ThemeProvider } from "@/components/theme/theme-provider"
+import StyledBorder from "@/components/layouts/StyledBorder";
+import {Threedots} from "@/components/loaders/Threedots";
+import { SeaBoat } from "@/components/loaders/SeaBoat";
 
 
 const geistSans = Geist({
@@ -26,14 +30,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
       >
-
+              <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {/* <SeaBoat/>
+        <Threedots/> */}
         <Banner/>
-        {children}
+        {children} 
         <Footer/>
+        </ThemeProvider>
       </body>
     </html>
   );

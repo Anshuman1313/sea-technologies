@@ -7,6 +7,7 @@ import Ep2 from "@/components/practicemotion/LogoAnimation";
 import LogoAnimation from '@/components/practicemotion/LogoAnimation';
 import { motion } from 'motion/react';
 import { Button } from '../ui/button';
+import { ModeToggle } from '../theme/ToggleTheme';
 
 interface DropdownItem {
     label: string;
@@ -211,7 +212,10 @@ const Navbar: React.FC = () => {
                     </div>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden md:block">
+                    <div className="hidden md:flex md:gap-2 ">
+                        <div>
+                            <ModeToggle/>
+                        </div>
                         <Link
                             href="/contactus"
                             className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 inline-block"
