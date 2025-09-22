@@ -1,6 +1,7 @@
 
-import { HealthcareTrust } from '@/components/industries-healthcare/HealthcareHero'
-import { HealthcareHero } from '@/components/industries-healthcare/HealthcareTrust'
+
+import { HealthcareHero } from '@/components/industries-healthcare/HealthcareHero'
+import { HealthcareTrust } from '@/components/industries-healthcare/HealthcareTrust'
 import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
