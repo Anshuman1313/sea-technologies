@@ -160,7 +160,7 @@ export function MobileTechServices() {
           className="text-center"
         >
           <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-            <Link href="/contact" className="flex items-center gap-2">
+            <Link href="/contactus" className="flex items-center gap-2">
               Get App Development Quote
               <ArrowRight size={20} />
             </Link>

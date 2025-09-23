@@ -257,7 +257,7 @@ export function HealthcareTrust() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Start Your Project
                 <ArrowRight size={20} />
               </Link>

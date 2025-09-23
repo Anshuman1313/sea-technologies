@@ -102,7 +102,7 @@ export function WebTechHero() {
               className="flex flex-wrap gap-4"
             >
               <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                <Link href="/contact" className="flex items-center gap-2">
+                <Link href="/contactus" className="flex items-center gap-2">
                   Start Project
                   <ArrowRight size={20} />
                 </Link>

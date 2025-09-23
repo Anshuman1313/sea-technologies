@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/layouts/Footer";
-import Banner from "@/components/landingpage/Banner";
-import { ThemeProvider } from "@/components/theme/theme-provider"
-import StyledBorder from "@/components/layouts/StyledBorder";
-import {Threedots} from "@/components/loaders/Threedots";
-import { SeaBoat } from "@/components/loaders/SeaBoat";
+import Footer from "../components/layouts/Footer";
+import Banner from "../components/landingpage/Banner";
+import { ThemeProvider } from "../components/theme/theme-provider"
+
 
 
 const geistSans = Geist({
@@ -40,8 +38,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {/* <SeaBoat/>
-        <Threedots/> */}
+        
         <Banner/>
         {children} 
         <Footer/>

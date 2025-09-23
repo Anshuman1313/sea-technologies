@@ -1,10 +1,11 @@
 "use client"
 
 import { motion } from "motion/react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+
+import { Badge } from "../ui/badge"
 import { ArrowRight, Server, Database, Shield, Clock } from "lucide-react"
 import Link from "next/link"
+import { Button } from "../ui/button"
 
 export function BackendDevsHero() {
   return (
@@ -84,7 +85,7 @@ export function BackendDevsHero() {
             className="flex flex-wrap gap-3 justify-center mb-6"
           >
             <Button asChild size="lg" className="bg-slate-600 hover:bg-slate-700 text-white">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Hire Now
                 <ArrowRight size={18} />
               </Link>

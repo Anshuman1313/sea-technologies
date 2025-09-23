@@ -83,7 +83,7 @@ export function FinTechHero() {
             className="flex flex-wrap gap-4 justify-center"
           >
             <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-blue-50">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Get Started
                 <ArrowRight size={20} />
               </Link>

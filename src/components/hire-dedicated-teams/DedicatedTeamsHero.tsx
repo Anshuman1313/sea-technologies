@@ -95,7 +95,7 @@ export function DedicatedTeamsHero() {
             className="flex flex-wrap gap-4 justify-center mb-8"
           >
             <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Build My Team
                 <ArrowRight size={20} />
               </Link>

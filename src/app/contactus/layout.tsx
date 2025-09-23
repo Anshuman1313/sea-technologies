@@ -6,16 +6,14 @@ export const metadata = {
 };
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-gray-50">
+    <>
         {/* ✅ reCAPTCHA script */}
         <Script
           src="https://www.google.com/recaptcha/api.js"
           strategy="afterInteractive"
         />
         {children}
-      </body>
-    </html>
+     </>
   );
 }
  

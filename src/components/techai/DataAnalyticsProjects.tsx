@@ -335,7 +335,7 @@ export function DataAnalyticsProjects() {
             Ready to unlock the power of your data with AI and advanced analytics?
           </p>
           <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-            <Link href="/contact" className="flex items-center gap-2">
+            <Link href="/contactus" className="flex items-center gap-2">
               Start Data Analytics Project
               <ArrowRight size={20} />
             </Link>

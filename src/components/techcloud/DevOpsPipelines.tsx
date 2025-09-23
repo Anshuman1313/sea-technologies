@@ -298,7 +298,7 @@ export function DevOpsPipelines() {
             Ready to accelerate your development with automated CI/CD pipelines?
           </p>
           <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-            <Link href="/contact" className="flex items-center gap-2">
+            <Link href="/contactus" className="flex items-center gap-2">
               Setup DevOps Pipeline
               <ArrowRight size={20} />
             </Link>

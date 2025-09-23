@@ -84,7 +84,7 @@ export function FullStackDevsHero() {
             className="flex flex-wrap gap-3 justify-center mb-6"
           >
             <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Hire Now
                 <ArrowRight size={18} />
               </Link>

@@ -139,7 +139,7 @@ export function AiDataScienceHero() {
               className="flex flex-wrap gap-4"
             >
               <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-                <Link href="/contact" className="flex items-center gap-2">
+                <Link href="/contactus" className="flex items-center gap-2">
                   Start AI Project
                   <ArrowRight size={20} />
                 </Link>

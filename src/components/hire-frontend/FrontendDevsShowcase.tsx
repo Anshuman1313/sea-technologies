@@ -229,7 +229,7 @@ export function FrontendDevsShowcase() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Button asChild variant="secondary" size="lg">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Get Custom Team
                 <ArrowRight size={18} />
               </Link>

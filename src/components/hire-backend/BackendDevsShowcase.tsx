@@ -1,9 +1,9 @@
 "use client"
 
 import { motion } from "motion/react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "../ui/card"
+import { Button } from "../ui/button"
+import { Badge } from "../ui/badge"
 import { ArrowRight, Star, MapPin, Server, Database, Shield } from "lucide-react"
 import Link from "next/link"
 
@@ -229,7 +229,7 @@ export function BackendDevsShowcase() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Button asChild variant="secondary" size="lg">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Get Custom Team
                 <ArrowRight size={18} />
               </Link>
