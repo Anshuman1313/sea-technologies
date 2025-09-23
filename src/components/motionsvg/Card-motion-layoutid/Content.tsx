@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Card from "./Card";
 import { Svg_Coponent } from "./svg-component";
 import { SvgLines } from "./SvgLine";
-import CpuLines from "../SvgLines/CpuLines";
+import {CpuLines} from "../SvgLines/CpuLines";
 
 const geistSans = Geist({ subsets: ["latin"] });
 const geistMono = Geist_Mono({ subsets: ["latin"] });

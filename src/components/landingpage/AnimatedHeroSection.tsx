@@ -1,11 +1,9 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { BackgroundGraphics } from "../practicemotion/background-graphics";
+import { BackgroundGraphics } from "../motionsvg/background-graphics";
 import { Button } from "../ui/button";
-import { MovingLogos } from "./MovingLogos";
-import OceanLinesBackground from "../practicemotion/SvgLines/OceanLines";
-import LogoSection from "./LogoSection";
+
 
 export function AnimatedHeroSection() {
   const containerRef = useRef<HTMLElement>(null);

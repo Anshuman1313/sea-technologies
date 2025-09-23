@@ -84,7 +84,7 @@ export function FrontendDevsHero() {
             className="flex flex-wrap gap-3 justify-center mb-6"
           >
             <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contactus" className="flex items-center gap-2">
                 Hire Now
                 <ArrowRight size={18} />
               </Link>

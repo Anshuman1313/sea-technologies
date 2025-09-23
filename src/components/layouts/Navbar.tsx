@@ -3,11 +3,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { X, Menu, ChevronDown } from 'lucide-react';
-import Ep2 from "@/components/practicemotion/LogoAnimation";
-import LogoAnimation from '@/components/practicemotion/LogoAnimation';
-import { motion } from 'motion/react';
 import { Button } from '../ui/button';
 import { ModeToggle } from '../theme/ToggleTheme';
+import LogoAnimation from '../motionsvg/LogoAnimation';
 
 interface DropdownItem {
     label: string;
@@ -77,7 +75,7 @@ const Navbar: React.FC = () => {
                 { label: 'Our Story', href: '/about/story', description: 'Who we are & our journey' },
                 { label: 'Leadership', href: '/about/leadership', description: 'Meet our core team' },
                 { label: 'Careers', href: '/about/careers', description: 'Join SeaTechnologies' },
-                { label: 'Contact Us', href: '/about/contactus', description: 'Lets build together' }
+                { label: 'Contact Us', href: '/contactus', description: 'Lets build together' }
             ]
         },
     ];

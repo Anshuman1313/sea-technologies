@@ -141,7 +141,7 @@ export function ProductEngineeringHero() {
               className="flex flex-wrap gap-4"
             >
               <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all">
-                <Link href="/contact" className="flex items-center gap-2">
+                <Link href="/contactus" className="flex items-center gap-2">
                   Start Your Product Journey
                   <ArrowRight size={20} />
                 </Link>

@@ -248,7 +248,7 @@ export function ItConsultingServices() {
           className="text-center"
         >
           <Button asChild size="lg" className="bg-gradient-to-r from-slate-600 via-blue-600 to-indigo-700 hover:from-slate-700 hover:via-blue-700 hover:to-indigo-800 text-white shadow-lg hover:shadow-xl transition-all">
-            <Link href="/contact" className="flex items-center gap-2">
+            <Link href="/contactus" className="flex items-center gap-2">
               Schedule Strategic Consultation
               <ArrowRight size={20} />
             </Link>

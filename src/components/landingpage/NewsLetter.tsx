@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export function Newsletter() {
   const [email, setEmail] = useState('')
@@ -23,49 +22,78 @@ export function Newsletter() {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-   
-      transition={{ duration: 0.5 }}
-         whileInView={{ opacity: 1, y: 0 }} // animate when in view
-              viewport={{ once: true, amount: 0.3 }} 
-      // once: true → only animate the first time it comes into view
-      // amount: 0.3 → triggers when 30% of the component is visible
-    >
-      <Card className="max-w-md mx-auto">
-        <CardHeader className="text-center text-xl ">
-          <CardTitle className='font-bold'>Join Our Newsletter</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <motion.div whileTap={{ scale: 0.95 }}>
-              <Button 
-                type="submit" 
-                className="w-full bg-blue-500 "
-                disabled={loading}
-              >
-                {loading ? 'Subscribing...' : 'Subscribe'}
-              </Button>
-            </motion.div>
+    <section className="py-16 px-4 max-h-[50vh] min-h-[40vh] flex items-center justify-center">
+      <div className="max-w-4xl mx-auto w-full text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="space-y-8"
+        >
+          {/* Header Content */}
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              Sign up for our newsletter
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              Be the first to know about releases and industry news and insights.
+            </p>
+          </div>
+
+          {/* Form */}
+          <div className="space-y-6">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+              <div className="flex-1">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="h-12 bg-gray-50 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 rounded-xl"
+                />
+              </div>
+              <motion.div whileTap={{ scale: 0.98 }}>
+                <Button 
+                  type="submit" 
+                  className="h-12 px-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg transition-all duration-200 whitespace-nowrap"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Subscribing...
+                    </div>
+                  ) : (
+                    'Subscribe'
+                  )}
+                </Button>
+              </motion.div>
+            </form>
+
+            {/* Success Message */}
             {message && (
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-green-600 text-sm text-center"
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-green-600 font-medium"
               >
                 {message}
-              </motion.p>
+              </motion.div>
             )}
-          </form>
-        </CardContent>
-      </Card>
-    </motion.div>
+
+            {/* Privacy Policy */}
+            <p className="text-sm text-gray-500">
+              We care about your data in our{' '}
+              <a href="#" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">
+                privacy policy
+              </a>
+              .
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   )
 }

@@ -370,7 +370,7 @@ export function UiUxDesignServices() {
           className="text-center"
         >
           <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transition-all">
-            <Link href="/contact" className="flex items-center gap-2">
+            <Link href="/contactus" className="flex items-center gap-2">
               Let's Create Something Beautiful
               <ArrowRight size={20} />
             </Link>

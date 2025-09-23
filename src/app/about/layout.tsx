@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Script from "next/script";
 import Navbar from "@/components/layouts/Navbar";
 export const metadata = {
   title: "Sea Technologies",
@@ -6,13 +7,10 @@ export const metadata = {
 };
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    
-     <>
+    <>
         <Navbar/>
-      
-
         {children}
-   </>
-   
+     </>
   );
 }
+ 

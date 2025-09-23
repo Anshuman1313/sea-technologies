@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                 Get Started Today
               </p>
               <Link
-                href="/contact"
+                href="/contactus"
                 className="mt-2 inline-block bg-white text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors duration-200"
               >
                 Contact Us

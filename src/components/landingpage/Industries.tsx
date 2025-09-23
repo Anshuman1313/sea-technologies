@@ -1,7 +1,7 @@
 import { ArrowRight, Banknote, Building, Code, CreditCard, Factory, HeartPulse, Plane, ShieldCheck, Wallet } from "lucide-react";
-import { CpuLines } from "../practicemotion/SvgLines/CpuLines";
+import { CpuLines } from "../motionsvg/SvgLines/CpuLines";
 import { useRef, useState, useEffect } from "react";
-import IndustryGrid from "../practicemotion/SvgLines/IndustryCpuLines";
+import IndustryGrid from "../motionsvg/SvgLines/IndustryCpuLines";
 
 interface CardPosition {
   x: number;
