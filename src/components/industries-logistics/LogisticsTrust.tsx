@@ -264,8 +264,8 @@ export function LogisticsTrust() {
                 <ArrowRight size={20} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-red-300 text-red-100 hover:bg-red-700">
-              <Link href="/case-studies">logistics Case Studies</Link>
+            <Button asChild variant="outline" size="lg" className="border-red-300 text-black">
+              <Link href="/contactus">logistics Case Studies</Link>
             </Button>
           </div>
         </motion.div>

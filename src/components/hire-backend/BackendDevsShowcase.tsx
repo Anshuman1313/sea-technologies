@@ -234,8 +234,8 @@ export function BackendDevsShowcase() {
                 <ArrowRight size={18} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-slate-300 text-slate-200 hover:bg-slate-700">
-              <Link href="/schedule">Schedule Call</Link>
+            <Button asChild variant="outline" size="lg" className="border-slate-300 text-black">
+              <Link href="/contactus">Schedule Call</Link>
             </Button>
           </div>
         </motion.div>

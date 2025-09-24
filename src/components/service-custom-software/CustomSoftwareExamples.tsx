@@ -352,7 +352,7 @@ export function CustomSoftwareExamples() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/case-studies">View More Case Studies</Link>
+              <Link href="/contactus">View More Case Studies</Link>
             </Button>
           </div>
         </motion.div>

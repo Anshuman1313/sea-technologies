@@ -234,8 +234,8 @@ export function FullStackDevsShowcase() {
                 <ArrowRight size={18} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-indigo-300 text-indigo-100 hover:bg-indigo-700">
-              <Link href="/schedule">Schedule Call</Link>
+            <Button asChild variant="outline" size="lg" className="border-indigo-300 text-black">
+              <Link href="/contactus">Schedule Call</Link>
             </Button>
           </div>
         </motion.div>

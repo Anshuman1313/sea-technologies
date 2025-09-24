@@ -262,8 +262,8 @@ export function HealthcareTrust() {
                 <ArrowRight size={20} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-green-300 text-green-100 hover:bg-green-700">
-              <Link href="/case-studies">Healthcare Case Studies</Link>
+            <Button asChild variant="outline" size="lg" className="border-green-300 text-black">
+              <Link href="/contactus">Healthcare Case Studies</Link>
             </Button>
           </div>
         </motion.div>

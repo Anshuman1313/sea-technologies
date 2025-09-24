@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
           
           {/* Overview Section */}
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-6 border-b-2 border-blue-100 pb-2">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-6 border-b-2 border-blue-100 pb-2 ">
               Overview
             </h2>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">

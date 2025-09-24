@@ -234,8 +234,8 @@ export function MobileDevsShowcase() {
                 <ArrowRight size={18} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-emerald-300 text-emerald-100 hover:bg-emerald-700">
-              <Link href="/schedule">Schedule Call</Link>
+            <Button asChild variant="outline" size="lg" className="border-emerald-300 text-black">
+              <Link href="/contactus">Schedule Call</Link>
             </Button>
           </div>
         </motion.div>

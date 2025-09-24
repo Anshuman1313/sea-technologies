@@ -261,7 +261,7 @@ export function ItConsultingResults() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-2 border-slate-200 hover:bg-slate-50 text-slate-700">
-              <Link href="/case-studies">View Detailed Case Studies</Link>
+              <Link href="/contactus">View Detailed Case Studies</Link>
             </Button>
           </div>
         </motion.div>

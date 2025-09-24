@@ -10,9 +10,6 @@ const Footer: React.FC = () => {
         { label: "Mobile Development", href: "/technologies/mobile" },
         { label: "Cloud & DevOps", href: "/technologies/cloud" },
         { label: "AI & Data Science", href: "/technologies/ai" },
-        { label: "Enterprise Solutions", href: "/technologies/enterprise" },
-        { label: "API Development", href: "/technologies/api" },
-        { label: "Database Solutions", href: "/technologies/database" },
       ],
     },
     {
@@ -22,8 +19,6 @@ const Footer: React.FC = () => {
         { label: "Product Engineering", href: "/services/product-engineering" },
         { label: "UI/UX Design", href: "/services/design" },
         { label: "IT Consulting", href: "/services/consulting" },
-        { label: "Quality Assurance", href: "/services/qa" },
-        { label: "Maintenance & Support", href: "/services/support" },
       ],
     },
     {
@@ -33,20 +28,14 @@ const Footer: React.FC = () => {
         { label: "Healthcare Technology", href: "/industries/healthcare" },
         { label: "E-Commerce Platforms", href: "/industries/ecommerce" },
         { label: "Education Technology", href: "/industries/education" },
-        { label: "Logistics & Supply Chain", href: "/industries/logistics" },
-        { label: "Government Solutions", href: "/industries/government" },
       ],
     },
     {
       title: "Company",
       links: [
-        { label: "About SeaTechnologies", href: "/about" },
-        { label: "Our Team", href: "/about/team" },
-        { label: "Careers", href: "/careers" },
-        { label: "Case Studies", href: "/case-studies" },
-        { label: "Blog", href: "/blog" },
-        { label: "Events", href: "/events" },
-        { label: "News", href: "/news" },
+        { label: "About SeaTechnologies", href: "/about/story" },
+        { label: "Our Team", href: "/hire/dedicated-teams" },
+        { label: "Careers", href: "/about/careers" },
       ],
     },
   ];

@@ -211,7 +211,7 @@ const Navbar: React.FC = () => {
 
                     {/* Desktop CTA Button */}
                     <div className="hidden md:flex md:gap-2 ">
-                        <div>
+                        <div className='hidden'>
                             <ModeToggle/>
                         </div>
                         <Link
