@@ -132,12 +132,12 @@ const Navbar: React.FC = () => {
     return (
         <nav className={`  ${scrolled ? "bg-white/80  "  : "bg-white/10 "} border-b-[1px] border-neutral-200  backdrop-blur-md  sticky top-0 z-50    transition-all duration-300`}>
             <div className={`mx-auto px-5 sm:px-6 lg:px-8  `}>
-                <div className="flex justify-between items-center h-13 md:h-15 md:px-3">
+                <div className="flex justify-between items-center h-13 md:h-15 md:px-3 ">
                     {/* Logo */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 cursor-pointer ">
                         <Link
                             href="/"
-                            className={`font-bold tracking-wide text-black transition-all duration-300`}
+                            className={`font-bold  tracking-wide text-black transition-all duration-300`}
                         >
                            <div className='hidden  md:block'>
                             
