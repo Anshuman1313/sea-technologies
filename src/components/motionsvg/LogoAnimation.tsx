@@ -33,7 +33,7 @@ export default function LogoAnimation() {
   const letters = text.split('')
 
   return (
-    <div className="inline-flex cursor-default select-none text-xl md:text-3xl font-bold">
+    <div className="inline-flex  select-none text-xl md:text-3xl font-bold cursor-pointer">
       {letters.map((ch, idx) => {
         const isS = idx === 0
         const isT = idx === 4
