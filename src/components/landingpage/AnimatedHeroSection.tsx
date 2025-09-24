@@ -94,7 +94,7 @@ export function AnimatedHeroSection() {
           <Button 
             variant="outline" 
             size="lg"
-            className="px-8 py-3 text-base border-2 hover:border-primary/50 transition-all duration-300"
+            className="px-8 cursor-pointer py-3 text-base border-2 hover:border-primary/50 transition-all duration-300"
           >
             Learn More
           </Button>
