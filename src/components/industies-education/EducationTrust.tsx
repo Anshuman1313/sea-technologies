@@ -264,8 +264,8 @@ export function EducationTrust() {
                 <ArrowRight size={20} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-indigo-300 text-indigo-100 hover:bg-indigo-700">
-              <Link href="/case-studies">Education Case Studies</Link>
+            <Button asChild variant="outline" size="lg" className="border-indigo-300 text-black">
+              <Link href="/contactus">Education Case Studies</Link>
             </Button>
           </div>
         </motion.div>

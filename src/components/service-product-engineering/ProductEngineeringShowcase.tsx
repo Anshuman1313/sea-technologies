@@ -371,7 +371,7 @@ export function ProductEngineeringShowcase() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-2 border-blue-200 hover:bg-blue-50">
-              <Link href="/portfolio">View More Success Stories</Link>
+              <Link href="/contactus">View More Success Stories</Link>
             </Button>
           </div>
         </motion.div>

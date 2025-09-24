@@ -264,8 +264,8 @@ export function ECommerceTrust() {
                 <ArrowRight size={20} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-orange-300 text-orange-100 hover:bg-orange-700">
-              <Link href="/case-studies">E-Commerce Case Studies</Link>
+            <Button asChild variant="outline" size="lg" className="border-orange-300 text-black">
+              <Link href="/contactus">E-Commerce Case Studies</Link>
             </Button>
           </div>
         </motion.div>

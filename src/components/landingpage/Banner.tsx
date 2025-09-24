@@ -5,9 +5,9 @@ const Banner = () => {
     return (
         <>
         <div className="bg-gradient-to-b from-blue-500 to-blue-600 px-2 py-2 font-sans text-xs font-medium tracking-tight text-white sm:px-4 sm:py-3 sm:text-sm md:text-right flex flex-col md:flex-row md:justify-end md:items-center gap-2">
-            <span>Email: <a href="mailto:sales@seatechnologies.com" className="underline hover:text-gray-200">sales@seatechnologies.com</a></span>
+            <span>Email: <a href="mailto:sales@seatechnologies.com" className="underline hover:text-gray-200">sales@seatechnologies.in</a></span>
             <span className="hidden md:inline-block">|</span>
-            <span>Contact: <a href="tel:9056641707" className="underline hover:text-gray-200">90566-41707</a></span>
+            <span>Contact: <a href="tel:9056641707" className="underline hover:text-gray-200">+91 90566-41707</a></span>
            
         </div>
 </>

@@ -354,7 +354,7 @@ export function DedicatedTeamsShowcase() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-gray-300 bg-neutral-100 text-black">
-              <Link href="/schedule-call">Schedule a Call</Link>
+              <Link href="/contactus-call">Schedule a Call</Link>
             </Button>
           </div>
         </motion.div>

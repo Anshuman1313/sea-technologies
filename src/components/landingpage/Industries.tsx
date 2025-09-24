@@ -69,7 +69,7 @@ export function Industries() {
         </p>
       </div>
 
-      <div className="flex flex-col mb-10 ">
+      <div className=" flex-col mb-10 hidden md:flex">
         {/* Top Industries */}
         <IndustryGrid industries={industriesTop} />
 
@@ -104,6 +104,17 @@ export function Industries() {
         {/* Bottom cards */}
         <IndustryGrid industries={industriesBottom} />
       </div>
+
+      <div className="flex flex-col px-2 mb-10 space-y-6 md:space-y-8 md:hidden">
+  {/* Top Industries */}
+  <IndustryGrid industries={industriesTop} />
+
+
+
+  {/* Bottom cards */}
+  <IndustryGrid industries={industriesBottom} />
+</div>
+
     </>
   );
 }
@@ -113,13 +124,13 @@ export const industriesBottom = [
   {
     title: "Real Estate",
     description: "Solutions for property management, smart housing, construction, and digital real estate platforms.",
-    link: "/industries/real-estate",
+    link: "/industries/ecommerce",
     icon: Building,
   },
   {
     title: "Banking",
     description: "Digital banking, core banking solutions, fraud detection, and secure financial services.",
-    link: "/industries/banking",
+    link: "/industries/fintech",
     icon: Banknote,
   },
   {
@@ -133,19 +144,19 @@ export const industriesTop = [
   {
     title: "Travel & Hospitality",
     description: "Booking engines, guest management, personalized experiences, and smart travel planning.",
-    link: "/industries/travel-hospitality",
+    link: "/industries/logistics",
     icon: Plane,
   },
   {
     title: "Manufacturing",
     description: "IoT-driven factories, predictive maintenance, robotics automation, and production analytics.",
-    link: "/industries/manufacturing",
+    link: "/industries/ecommerce",
     icon: Factory,
   },
   {
     title: "Insurance",
     description: "Policy management systems, claim automation, fraud detection, and risk assessment tools.",
-    link: "/industries/insurance",
+    link: "/industries/education",
     icon: ShieldCheck,
   },
 ];

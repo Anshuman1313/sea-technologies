@@ -73,11 +73,14 @@ export function AnimatedHeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
+             <a href="/contactus">
           <Button 
+
             size="lg" 
-            className="px-8 py-3 text-base bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
+            className="px-8 py-3 cursor-pointer text-base bg-black hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
-            Start Your Journey
+            
+           Start Your Journey
             <motion.div
               className="pb-[2px] md:ml-2"
               animate={{ x: [0, 4, 0] }}
@@ -86,7 +89,8 @@ export function AnimatedHeroSection() {
               →
             </motion.div>
           </Button>
-          
+          </a>
+           <a href="/about/story">
           <Button 
             variant="outline" 
             size="lg"
@@ -94,6 +98,7 @@ export function AnimatedHeroSection() {
           >
             Learn More
           </Button>
+          </a>
         </motion.div>
         
         <motion.div

@@ -421,7 +421,7 @@ export function UiUxDesignPortfolio() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-2 border-purple-200 hover:bg-purple-50 text-purple-700">
-              <Link href="/portfolio">View Full Portfolio</Link>
+              <Link href="/contactus">View Full Portfolio</Link>
             </Button>
           </div>
         </motion.div>

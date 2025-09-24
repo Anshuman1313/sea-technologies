@@ -89,7 +89,7 @@ export function LogisticsHero() {
               </Link>
             </Button>
             
-            <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+            <Button asChild variant="outline" size="lg" className="border-white/30 text-black">
               <Link href="#solutions">View Solutions</Link>
             </Button>
           </motion.div>

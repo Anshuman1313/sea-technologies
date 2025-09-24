@@ -16,7 +16,7 @@ interface IndustryGridProps {
 
 const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
   return (
-    <div className="flex justify-evenly gap-2">
+    <div className="flex flex-col sm:flex sm:flex-row justify-evenly gap-2">
       {industries.map((industry) => {
         const IconComponent = industry.icon;
         return (
