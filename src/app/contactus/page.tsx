@@ -6,6 +6,7 @@ import "react-phone-input-2/lib/style.css";
 import Navbar from "@/components/layouts/Navbar";
 import PhoneInput from "react-phone-input-2";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const options = [
     "Less than 5k USD",
@@ -42,11 +43,39 @@ const Page = () => {
                 .required("Message is required")
                 .min(5, "Message must be at least 5 characters"),
         }),
-        onSubmit: (values) => {
-            console.log("✅ Form submitted:", values);
-            alert("Form submitted! (connect backend to process)");
+        onSubmit: async (values, { setSubmitting }) => {
+            try {
+                setLoading(true)
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        access_key: '6798b9ae-9172-4ddd-b239-e872aba7050a',
+                        ...values
+                    })
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    alert('Form submitted successfully!');
+                    setLoading(false)
+                    formik.resetForm();
+                } else {
+                    alert('Error submitting form');
+                    setLoading(false)
+
+                }
+            } catch (error) {
+                alert('Network error occurred');
+                setLoading(false)
+
+            }
+            setSubmitting(false);
         },
     });
+    const [loading, setLoading] = useState(false);
 
     return (
         <div className="bg-gray-50">
@@ -66,9 +95,11 @@ const Page = () => {
                     <h1 className="text-3xl font-bold mb-8">Contact US</h1>
 
                     <form
+
                         onSubmit={formik.handleSubmit}
                         className="rounded-2xl space-y-4"
                     >
+
                         <div className="flex gap-10">
                             <div className="flex-1">
                                 <label className="block font-medium mb-1">Your Name</label>
@@ -79,8 +110,8 @@ const Page = () => {
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
                                     className={`w-full border-b p-2 focus:outline-none focus:ring-0 ${formik.touched.yourName && formik.errors.yourName
-                                            ? "border-red-500"
-                                            : "border-gray-300"
+                                        ? "border-red-500"
+                                        : "border-gray-300"
                                         }`}
                                 />
                                 {formik.touched.yourName && formik.errors.yourName && (
@@ -106,8 +137,8 @@ const Page = () => {
                                 />
                                 <hr
                                     className={`mt-1 ${formik.errors.phoneNumber
-                                            ? "bg-red-500 h-0.5"
-                                            : "bg-gray-300 h-0.5"
+                                        ? "bg-red-500 h-0.5"
+                                        : "bg-gray-300 h-0.5"
                                         }`}
                                 />
                                 {formik.touched.phoneNumber && formik.errors.phoneNumber && (
@@ -139,8 +170,8 @@ const Page = () => {
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
                                     className={`w-full border-b p-2 focus:outline-none focus:ring-0 ${formik.touched.email && formik.errors.email
-                                            ? "border-red-500"
-                                            : "border-gray-300"
+                                        ? "border-red-500"
+                                        : "border-gray-300"
                                         }`}
                                 />
                                 {formik.touched.email && formik.errors.email && (
@@ -220,8 +251,8 @@ const Page = () => {
                                 onBlur={formik.handleBlur}
                                 rows={1}
                                 className={`w-full border-b p-2 focus:outline-none focus:ring-0 ${formik.touched.message && formik.errors.message
-                                        ? "border-red-500"
-                                        : "border-gray-300"
+                                    ? "border-red-500"
+                                    : "border-gray-300"
                                     }`}
                             />
                             {formik.touched.message && formik.errors.message && (
@@ -249,10 +280,20 @@ const Page = () => {
 
                         <button
                             type="submit"
-                            className="w-[100px] cursor-pointer bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700"
+                            disabled={loading}
+                            className={cn(
+                                "w-[100px] font-semibold py-2 rounded-lg transition-all duration-200",
+                                loading
+                                    ? "cursor-not-allowed opacity-50 bg-gray-400 text-gray-600"
+                                    : "cursor-pointer bg-blue-600 text-white hover:bg-blue-700"
+                            )}
                         >
-                            Submit
+                            {loading ? "Submitting..." : "Submit"}
                         </button>
+
+
+
+
                     </form>
                 </div>
             </div>

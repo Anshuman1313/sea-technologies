@@ -124,7 +124,7 @@ export function BackendDevsShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-12 hidden"
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-3">

@@ -143,7 +143,7 @@ export function UiUxDesignPortfolio() {
           </motion.div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Designs That Win Hearts & Awards
+            Designs That Win Awards
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Explore our portfolio of award-winning designs that have transformed businesses, 
@@ -152,7 +152,7 @@ export function UiUxDesignPortfolio() {
         </motion.div>
 
         {/* Portfolio Projects */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-24">
+        <div className=" hidden lg:grid-cols-2 gap-12 mb-24">
           {portfolioProjects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -303,9 +303,9 @@ export function UiUxDesignPortfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 mb-20 relative overflow-hidden"
+          className="bg-white hidden rounded-3xl p-12 shadow-xl border border-gray-100 mb-20 relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
+          <div className="absolute top-0 right-0 w-32 h-32 opacity-5 ">
             <div className="text-8xl">💬</div>
           </div>
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-16">

@@ -128,7 +128,7 @@ export function MobileTechServices() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-blue-600 rounded-2xl p-8 text-white text-center mb-16"
+          className="bg-blue-600 hidden rounded-2xl p-8 text-white text-center mb-16"
         >
           <h3 className="text-2xl font-bold mb-6">App Store Success</h3>
           <div className="grid md:grid-cols-4 gap-6">

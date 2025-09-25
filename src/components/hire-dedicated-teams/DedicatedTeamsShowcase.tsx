@@ -15,7 +15,7 @@ const teamTypes = [
     roles: ["Senior Full-Stack Developers", "Frontend Specialists", "Backend Engineers", "DevOps Engineer", "Tech Lead"],
     teamSize: "5-8 members",
     startTime: "2 weeks",
-    pricing: "From $8,000/month",
+    pricing: "Contact us",
     benefits: ["End-to-end development", "Scalable architecture", "Modern tech stack", "Agile methodology"],
     color: "blue"
   },
@@ -26,7 +26,7 @@ const teamTypes = [
     roles: ["UI/UX Designers", "Frontend Developers", "React/Vue Specialists", "Mobile Developers", "Design Lead"],
     teamSize: "4-6 members",
     startTime: "1 week",
-    pricing: "From $6,500/month",
+    pricing: "Contact us",
     benefits: ["Design-first approach", "User-centered design", "Pixel-perfect implementation", "Design systems"],
     color: "blue"
   },
@@ -37,7 +37,7 @@ const teamTypes = [
     roles: ["Solution Architects", "Senior Developers", "Integration Specialists", "Security Engineers", "Project Manager"],
     teamSize: "8-12 members",
     startTime: "3 weeks",
-    pricing: "From $12,000/month",
+    pricing: "Contact us",
     benefits: ["Enterprise expertise", "Security focused", "Scalable solutions", "Integration ready"],
     color: "blue"
   }
@@ -178,7 +178,7 @@ export function DedicatedTeamsShowcase() {
                     </div>
 
                     {/* Pricing */}
-                    <div className="text-center p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
+                    <div className="text-center hidden p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
                       <DollarSign className="w-5 h-5 text-blue-600 mx-auto mb-2" />
                       <div className="text-lg font-bold text-blue-600">{team.pricing}</div>
                       <div className="text-xs text-gray-600">All-inclusive pricing</div>
@@ -211,9 +211,10 @@ export function DedicatedTeamsShowcase() {
                     </div>
 
                     {/* CTA */}
-                    <Button className={`w-full bg-${team.color}-600 hover:bg-${team.color}-700 text-white`}>
+                    <a href="/contactus">
+                   <Button className={`w-full cursor-pointer bg-${team.color}-600 hover:bg-${team.color}-700 text-white`}>
                       Build This Team
-                    </Button>
+                    </Button> </a>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -273,7 +274,7 @@ export function DedicatedTeamsShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 hidden"
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">

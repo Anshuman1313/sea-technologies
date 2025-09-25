@@ -17,7 +17,7 @@ export default function CustomSoftwarePage() {
       <CustomSoftwareHero />
       <CustomSoftwareServices />
       <CustomSoftwareProcess />
-      <CustomSoftwareExamples />
+      {/* <CustomSoftwareExamples /> */}
       <Newsletter />
     </main>
   )
