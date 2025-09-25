@@ -8,41 +8,33 @@ export const metadata: Metadata = {
 // Sample team data - replace with your actual team members
 const teamMembers = [
   {
-    id: 1,
-    name: 'Sarah Johnson',
-    role: 'Chief Executive Officer',
-    bio: 'Sarah brings over 15 years of leadership experience in technology and business strategy. She founded the company with a vision to transform how businesses leverage innovation.',
-    image: '/images/team/placeholder-female.jpg',
-    linkedin: '#',
-    email: 'sarah@company.com'
-  },
-  {
-    id: 2,
-    name: 'Michael Chen',
-    role: 'Chief Technology Officer',
-    bio: 'Michael leads our technical vision and engineering excellence. With a background in software architecture and emerging technologies, he drives our innovation forward.',
-    image: '/images/team/placeholder-male.jpg',
-    linkedin: '#',
-    email: 'michael@company.com'
-  },
-  {
-    id: 3,
-    name: 'Emily Rodriguez',
-    role: 'Chief Operating Officer',
-    bio: 'Emily oversees our operations and ensures seamless delivery of services. Her expertise in process optimization and team management keeps us running efficiently.',
-    image: '/images/team/placeholder-female-2.jpg',
-    linkedin: '#',
-    email: 'emily@company.com'
-  },
-  {
-    id: 4,
-    name: 'David Park',
-    role: 'Chief Marketing Officer',
-    bio: 'David leads our marketing strategy and brand development. His creative approach and market insights help us connect with clients and grow our presence.',
-    image: '/images/team/placeholder-male-2.jpg',
-    linkedin: '#',
-    email: 'david@company.com'
-  }
+  id: 1,
+  name: 'Vishali Lotey',
+  role: 'Chief Technology Officer',
+  bio: 'Vishali is a seasoned technology leader with expertise in driving digital transformation and building scalable solutions. She oversees the company’s tech vision and ensures innovation at every step.',
+  image: '/images/team/placeholder-female.jpg',
+  linkedin: '#',
+  email: 'vishali@company.com',
+},
+{
+  id: 2,
+  name: 'Nitish Bhardwaj',
+  role: 'Business Development Manager',
+  bio: 'Nitish specializes in strategic partnerships and growth initiatives. With a strong background in sales and client relations, he focuses on expanding market reach and building long-term collaborations.',
+  image: '/images/team/placeholder-male.jpg',
+  linkedin: '#',
+  email: 'nitish@company.com',
+},
+{
+  id: 3,
+  name: 'Sunny Thakur',
+  role: 'Vice President',
+  bio: 'Sunny brings leadership and operational expertise to the organization. He plays a key role in aligning business strategy with execution, ensuring sustainable growth and team success.',
+  image: '/images/team/placeholder-male.jpg',
+  linkedin: '#',
+  email: 'sunny@company.com',
+}
+  
 ];
 
 export default function LeadershipPage() {
@@ -93,7 +85,7 @@ export default function LeadershipPage() {
                 </p>
 
                 {/* Contact Links */}
-                <div className="flex space-x-4">
+                <div className=" space-x-4 hidden">
                   <a 
                     href={`mailto:${member.email}`}
                     className="inline-flex items-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"

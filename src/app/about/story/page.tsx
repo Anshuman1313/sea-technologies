@@ -1,9 +1,8 @@
-
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Story | Your Company',
-  description: 'Who we are & our journey - Learn about our company story and mission',
+  title: 'Our Story | Sea Technologies',
+  description: 'Learn about Sea Technologies – from our beginnings in 2010 with Dot Net, to expanding across mobile, Flutter, Angular, and beyond.',
 };
 
 export default function StoryPage() {
@@ -16,7 +15,7 @@ export default function StoryPage() {
             Our Story
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Who we are & our journey
+            Building meaningful solutions through technology since 2010
           </p>
         </div>
       </div>
@@ -27,67 +26,53 @@ export default function StoryPage() {
           {/* Company Origins */}
           <div className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              How It All Started
+              Our Beginning – 2010
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Founded in 2020, our company began with a simple yet powerful vision: to revolutionize 
-              the way businesses leverage technology to solve complex challenges. What started as a 
-              small team of passionate engineers has grown into a trusted partner for organizations 
-              across various industries.
+              Sea Technologies was founded in 2010 in Mohali, Punjab, by five passionate individuals
+              with a dream to build something meaningful through technology. At that time, our
+              expertise revolved around a single technology: <strong>Dot Net</strong>. With dedication
+              and determination, we laid the foundation of a trusted technology partner for businesses.
             </p>
           </div>
 
-          {/* Mission & Values */}
+          {/* Expanding Horizons */}
           <div className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              Our Mission
+              Expanding Horizons – 2010 to 2015
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              We believe that innovative technology should be accessible and transformative. Our 
-              mission is to bridge the gap between cutting-edge solutions and real-world applications, 
-              helping businesses thrive in an increasingly digital landscape.
+              Over the next five years, we expanded our capabilities, adding <strong>Mobile Applications</strong>,
+              <strong> Flutter</strong>, <strong>Angular</strong>, and other front-end technologies. 
+              This diversification allowed us to meet a broader range of client needs while 
+              maintaining our commitment to quality and innovation.
             </p>
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r">
-              <p className="text-blue-800 font-medium italic">
-                "Excellence through innovation, trust through transparency, and growth through collaboration."
-              </p>
-            </div>
           </div>
 
-          {/* Journey & Milestones */}
+          {/* Leadership & Growth */}
           <div className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              Our Journey
+              Leadership & Growth – 2017
             </h2>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-semibold">2020</span>
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-medium text-gray-900">Company Founded</h3>
-                  <p className="text-gray-600">Started with a team of 5 dedicated professionals</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-semibold">2022</span>
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-medium text-gray-900">Major Expansion</h3>
-                  <p className="text-gray-600">Reached 50+ clients and expanded our service offerings</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-semibold">2025</span>
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-medium text-gray-900">Present Day</h3>
-                  <p className="text-gray-600">Leading innovation with 200+ successful projects</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              In 2017, we welcomed our Chief Technology Officer (CTO), whose expertise and vision 
+              helped transform our team from 5 to 20 dedicated professionals. With her guidance, 
+              Sea Technologies took significant strides toward becoming a larger, more capable 
+              organization.
+            </p>
+          </div>
+
+          {/* Evolving with Technology */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Evolving with Technology – 2021 to Present
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              From 2021 onward, we have embraced evolving technologies and continue to strengthen 
+              our expertise to meet modern business challenges. Today, Sea Technologies stands as a 
+              trusted partner, delivering solutions that combine innovation, scalability, and 
+              reliability for clients across industries.
+            </p>
           </div>
 
           {/* Team Philosophy */}
@@ -96,9 +81,9 @@ export default function StoryPage() {
               Our Team
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Behind every successful project is our dedicated team of experts who bring diverse 
-              backgrounds, innovative thinking, and unwavering commitment to excellence. We foster 
-              a culture of continuous learning, collaboration, and creative problem-solving.
+              Behind every milestone is our growing team of passionate professionals. 
+              We foster a culture of continuous learning, collaboration, and innovation, 
+              ensuring that every project reflects our commitment to excellence.
             </p>
           </div>
 
@@ -119,7 +104,7 @@ export default function StoryPage() {
                 Get In Touch
               </a>
               <a 
-                href="/about" 
+                href="/contactus" 
                 className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-colors"
               >
                 Learn More
