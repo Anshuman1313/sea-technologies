@@ -17,7 +17,7 @@ export default function ItConsultingPage() {
       <ItConsultingHero />
       <ItConsultingServices />
       <ItConsultingProcess />
-      <ItConsultingResults />
+      {/* <ItConsultingResults /> */}
       <Newsletter />
     </main>
   )

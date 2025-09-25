@@ -17,7 +17,7 @@ export default function MobileDevelopmentPage() {
       <MobileTechHero />
       <MobileTechServices />
       <MobileTechFrameworks />
-      <MobileTechShowcase />
+      {/* <MobileTechShowcase /> */}
       <Newsletter />
     </main>
   )
