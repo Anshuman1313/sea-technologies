@@ -7,66 +7,67 @@ export const metadata: Metadata = {
 
 // Sample job openings data - replace with your actual job listings
 const jobOpenings = [
-  {
-    id: 1,
-    title: 'Senior Full Stack Developer',
-    department: 'Engineering',
-    location: 'Remote / Hybrid',
-    type: 'Full-time',
-    experience: '5+ years',
-    description: 'Join our engineering team to build cutting-edge web applications using modern technologies like React, Node.js, and cloud platforms.',
-    requirements: [
-      'Strong experience with React, TypeScript, and Node.js',
-      'Experience with cloud platforms (AWS, Azure, or GCP)',
-      'Knowledge of database systems and API design',
-      'Excellent problem-solving and communication skills'
-    ]
-  },
-  {
-    id: 2,
-    title: 'DevOps Engineer',
-    department: 'Infrastructure',
-    location: 'On-site',
-    type: 'Full-time',
-    experience: '3+ years',
-    description: 'Help us scale our infrastructure and improve deployment processes while ensuring high availability and security.',
-    requirements: [
-      'Experience with containerization (Docker, Kubernetes)',
-      'Knowledge of CI/CD pipelines and automation tools',
-      'Familiarity with monitoring and logging systems',
-      'Strong understanding of cloud infrastructure'
-    ]
-  },
-  {
-    id: 3,
-    title: 'UI/UX Designer',
-    department: 'Design',
-    location: 'Remote',
-    type: 'Full-time',
-    experience: '3+ years',
-    description: 'Create intuitive and beautiful user experiences for our products while collaborating closely with engineering teams.',
-    requirements: [
-      'Proficiency in design tools (Figma, Adobe Creative Suite)',
-      'Strong portfolio showcasing UI/UX work',
-      'Understanding of user-centered design principles',
-      'Experience with design systems and prototyping'
-    ]
-  },
-  {
-    id: 4,
-    title: 'Product Marketing Manager',
-    department: 'Marketing',
-    location: 'Hybrid',
-    type: 'Full-time',
-    experience: '4+ years',
-    description: 'Drive product positioning, messaging, and go-to-market strategies for our innovative technology solutions.',
-    requirements: [
-      'Experience in B2B product marketing',
-      'Strong analytical and strategic thinking skills',
-      'Excellent written and verbal communication',
-      'Knowledge of digital marketing channels and tools'
-    ]
-  }
+{
+  id: 1,
+  title: '.NET Developer',
+  department: 'Engineering',
+  location: 'Onsite',
+  type: 'Full-time',
+  experience: '1.5 - 3 years',
+  description: 'Work on building and maintaining .NET applications, ensuring high performance, scalability, and quality standards.',
+  requirements: [
+    'Hands-on experience with .NET Core / ASP.NET MVC',
+    'Strong knowledge of C# and object-oriented programming',
+    'Experience with REST APIs and database integration',
+    'Ability to debug, test, and optimize applications'
+  ]
+},
+{
+  id: 2,
+  title: 'SQL Developer',
+  department: 'Engineering',
+  location: 'Onsite',
+  type: 'Full-time',
+  experience: '1.5 - 3 years',
+  description: 'Design, develop, and optimize SQL queries, procedures, and databases to support business-critical applications.',
+  requirements: [
+    'Proficiency in writing complex SQL queries and stored procedures',
+    'Experience with relational database management systems (RDBMS)',
+    'Strong understanding of data modeling and performance tuning',
+    'Knowledge of ETL processes and reporting tools is a plus'
+  ]
+},
+{
+  id: 3,
+  title: 'Business Development Executive (Evening Shift)',
+  department: 'Sales',
+  location: 'Onsite',
+  type: 'Full-time',
+  experience: '1 - 3 years',
+  description: 'Engage with potential clients, identify new business opportunities, and contribute to revenue growth during evening shifts.',
+  requirements: [
+    'Proven experience in business development or sales',
+    'Excellent communication and negotiation skills',
+    'Ability to manage client relationships effectively',
+    'Comfortable working in evening shifts and achieving targets'
+  ]
+},
+{
+  id: 4,
+  title: 'Python Developer (AI/ML)',
+  department: 'Engineering',
+  location: 'Hybrid',
+  type: 'Full-time',
+  experience: '1 - 2 years',
+  description: 'Contribute to AI/ML projects by building, training, and deploying machine learning models using Python.',
+  requirements: [
+    'Hands-on experience with Python and ML libraries (NumPy, Pandas, Scikit-learn, TensorFlow, or PyTorch)',
+    'Knowledge of data preprocessing, feature engineering, and model training',
+    'Ability to work with large datasets and perform data analysis',
+    'Strong problem-solving and algorithmic skills'
+  ]
+}
+
 ];
 
 const benefits = [
