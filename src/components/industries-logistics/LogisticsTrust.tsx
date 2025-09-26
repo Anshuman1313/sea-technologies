@@ -187,9 +187,7 @@ export function LogisticsTrust() {
                         ))}
                       </div>
 
-                      <Button variant="outline" className="w-full group-hover:bg-red-50">
-                        Learn More
-                      </Button>
+                      
                     </div>
                   </Card>
                 </motion.div>

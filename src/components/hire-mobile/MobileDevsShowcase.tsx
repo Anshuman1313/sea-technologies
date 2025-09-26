@@ -98,7 +98,7 @@ export function MobileDevsShowcase() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                 >
                   <Icon className="w-8 h-8 text-emerald-600 mb-4 mx-auto" />
@@ -123,7 +123,7 @@ export function MobileDevsShowcase() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className="mb-12 hidden"
         >
           <div className="text-center mb-8">
@@ -142,7 +142,7 @@ export function MobileDevsShowcase() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <Card className="border-0 shadow-sm hover:shadow-md transition-all duration-300 bg-white">
                   <CardContent className="p-6">
@@ -217,7 +217,7 @@ export function MobileDevsShowcase() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className="text-center bg-emerald-600 rounded-2xl p-8 text-white"
         >
           <h3 className="text-xl lg:text-2xl font-bold mb-3">

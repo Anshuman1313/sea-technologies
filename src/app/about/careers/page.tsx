@@ -230,9 +230,11 @@ export default function CareersPage() {
               We're always looking for talented individuals. Send us your resume and let us know 
               how you'd like to contribute to SeaTechnologies.
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+            <a href="/contactus">
+            <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
               Submit General Application
             </button>
+            </a>
           </div>
         </div>
       </div>
@@ -368,7 +370,7 @@ export default function CareersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:careers@seatechnologies.com" 
+              href="/contactus" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
             >
               Apply Now

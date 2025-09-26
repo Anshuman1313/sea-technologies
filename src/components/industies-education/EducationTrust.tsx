@@ -187,9 +187,7 @@ export function EducationTrust() {
                         ))}
                       </div>
 
-                      <Button variant="outline" className="w-full group-hover:bg-indigo-50">
-                        Learn More
-                      </Button>
+                    
                     </div>
                   </Card>
                 </motion.div>
