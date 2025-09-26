@@ -9,16 +9,54 @@ export function Newsletter() {
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
+ const [isError, setIsError] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
+    setMessage('')
+    setIsError(false)
     
-    setTimeout(() => {
-      setMessage('Thanks for subscribing!')
-      setEmail('')
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '6798b9ae-9172-4ddd-b239-e872aba7050a', 
+          email: email,
+          subject: 'New Newsletter Subscription 📧',
+          from_name: 'SEA TECHNOLOGIES',
+          message: `New newsletter subscription from: ${email}`,
+         
+          autoresponder: 'true',
+          
+        })
+      })
+
+      const result = await response.json()
+      
+      if (response.status === 200 && result.success) {
+        setMessage('Thanks for subscribing! Check your email for confirmation.')
+        setEmail('')
+        setIsError(false)
+      } else {
+        setMessage(result.message || 'Something went wrong. Please try again.')
+        setIsError(true)
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      setMessage('Network error. Please try again later.')
+      setIsError(true)
+    } finally {
       setLoading(false)
-    }, 1000)
+     
+      setTimeout(() => {
+        setMessage('')
+      }, 3000)
+    }
   }
 
   return (
@@ -44,6 +82,10 @@ export function Newsletter() {
           {/* Form */}
           <div className="space-y-6">
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+               {/* Hidden fields for Web3Forms */}
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+              
               <div className="flex-1">
                 <Input
                   type="email"
@@ -72,12 +114,16 @@ export function Newsletter() {
               </motion.div>
             </form>
 
-            {/* Success Message */}
+           {/* Success/Error Message */}
             {message && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-green-600 font-medium"
+                className={`font-medium ${
+                  isError 
+                    ? 'text-red-600' 
+                    : 'text-green-600'
+                }`}
               >
                 {message}
               </motion.div>
