@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "../components/layouts/Footer";
 import Banner from "../components/landingpage/Banner";
 import { ThemeProvider } from "../components/theme/theme-provider"
-
+import { Toaster } from "@/components/ui/sonner"
 
 
 const geistSans = Geist({
@@ -32,17 +32,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
       >
-              <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-        
-        <Banner/>
-        {children} 
-        <Footer/>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+
+          <Banner />
+          {children}
+          <Footer />
         </ThemeProvider>
+        <Toaster position="top-center"
+        />
       </body>
     </html>
   );

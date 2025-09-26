@@ -27,7 +27,7 @@ const teamMembers = [
 },
 {
   id: 3,
-  name: 'Sunny Thakur',
+  name: 'Sunny T.',
   role: 'Vice President',
   bio: 'Sunny brings leadership and operational expertise to the organization. He plays a key role in aligning business strategy with execution, ensuring sustainable growth and team success.',
   image: '/images/team/placeholder-male.jpg',
@@ -175,7 +175,7 @@ export default function LeadershipPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/careers" 
+              href="/about/careers" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
             >
               View Open Positions

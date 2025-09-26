@@ -7,6 +7,8 @@ import Navbar from "@/components/layouts/Navbar";
 import PhoneInput from "react-phone-input-2";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner"
+import { CheckCircle2 } from "lucide-react";
 
 const options = [
     "Less than 5k USD",
@@ -59,20 +61,36 @@ const Page = () => {
 
                 const result = await response.json();
                 if (result.success) {
-                    alert('Form submitted successfully!');
-                    setLoading(false)
+                    toast.success("Form submitted!", {
+                        description: (
+                            <span className="text-black">
+                                Thanks for reaching out. We'll get back to you soon.
+                            </span>
+                        ),
+                        duration: 4000,
+                        icon: <CheckCircle2 className="text-green-500" />,
+                        className: "border border-green-200 bg-green-50 text-green-900",
+                        descriptionClassName: "text-black",
+                        style: {
+                            backgroundColor: '#e7e5e4',
+                        }
+                    })
+                    setLoading(false);
                     formik.resetForm();
                 } else {
-                    alert('Error submitting form');
-                    setLoading(false)
-
+                    toast.error('Error submitting form', {
+                        description: 'Please check your details and try again.',
+                        duration: 4000,
+                    });
+                    setLoading(false);
                 }
             } catch (error) {
-                alert('Network error occurred');
-                setLoading(false)
-
+                toast.error('Network error occurred', {
+                    description: 'Please check your connection and try again.',
+                    duration: 4000,
+                });
+                setSubmitting(false);
             }
-            setSubmitting(false);
         },
     });
     const [loading, setLoading] = useState(false);
@@ -120,8 +138,7 @@ const Page = () => {
                                     </p>
                                 )}
                             </div>
-
-                            <div className="flex-1 ">
+                            <div className="flex-1">
                                 <label className="block font-medium mb-1">Phone Number</label>
                                 <PhoneInput
                                     country={"in"}
@@ -134,6 +151,11 @@ const Page = () => {
                                     inputClass="!w-full !p-2 !pl-14 !focus:outline-none !focus:ring-0 !border-0 border-b !shadow-none !bg-transparent"
                                     buttonClass="!border-0 !bg-transparent !absolute !left-0 flex items-center justify-center"
                                     dropdownClass="!bg-white !shadow-lg !border !rounded-md"
+                                    // Key prop - prevents manual editing of country code
+                                    countryCodeEditable={false}
+                                    // Optional: Enable search in dropdown for better UX
+                                    enableSearch={true}
+                                    searchPlaceholder="Search countries..."
                                 />
                                 <hr
                                     className={`mt-1 ${formik.errors.phoneNumber
@@ -147,6 +169,7 @@ const Page = () => {
                                     </p>
                                 )}
                             </div>
+
                         </div>
 
                         <div className="flex gap-10 md:flex-row flex-col md:mt-0 md:pt-2 pt-6">
@@ -226,9 +249,9 @@ const Page = () => {
                                                         name="budget"
                                                         value={option}
                                                         checked={formik.values.budget === option}
-                                                        onChange={(e)=>{
-                                                                        formik.handleChange(e);
-                                                                        setOpen(false)
+                                                        onChange={(e) => {
+                                                            formik.handleChange(e);
+                                                            setOpen(false)
                                                         }}
                                                         className="text-blue-600 focus:ring-0"
                                                     />{" "}

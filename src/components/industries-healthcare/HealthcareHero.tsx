@@ -185,9 +185,7 @@ export function HealthcareTrust() {
                         ))}
                       </div>
 
-                      <Button variant="outline" className="w-full group-hover:bg-green-50">
-                        Learn More
-                      </Button>
+                     
                     </div>
                   </Card>
                 </motion.div>

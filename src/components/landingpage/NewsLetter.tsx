@@ -39,7 +39,7 @@ export function Newsletter() {
       const result = await response.json()
       
       if (response.status === 200 && result.success) {
-        setMessage('Thanks for subscribing! Check your email for confirmation.')
+        setMessage('Thanks for subscribing!')
         setEmail('')
         setIsError(false)
       } else {
@@ -123,8 +123,7 @@ export function Newsletter() {
                   isError 
                     ? 'text-red-600' 
                     : 'text-green-600'
-                }`}
-              >
+                }`}              >
                 {message}
               </motion.div>
             )}

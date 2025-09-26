@@ -16,8 +16,8 @@ export default function AiDataSciencePage() {
     <main className="min-h-screen bg-white">
       <AiDataScienceHero />
       <AiDataScienceServices />
-      <MlModelsShowcase />
-      <DataAnalyticsProjects />
+      {/* <MlModelsShowcase /> */}
+      {/* <DataAnalyticsProjects /> */}
       <Newsletter />
     </main>
   )

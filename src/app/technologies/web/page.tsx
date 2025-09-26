@@ -17,7 +17,7 @@ export default function WebDevelopmentPage() {
       <WebTechHero />
       <WebTechServices />
       <WebTechStack />
-      <WebTechProjects />
+      {/* <WebTechProjects /> */}
       <Newsletter />
     </main>
   )
