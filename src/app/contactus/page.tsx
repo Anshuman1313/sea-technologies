@@ -80,10 +80,10 @@ const Page = () => {
     return (
         <div className="bg-gray-50">
             <Navbar />
-            <div className="flex px-10 py-5">
+            <div className="flex md:flex-row flex-col md:px-10 py-5">
 
 
-                <div className="flex items-center justify-center w-[55%]">
+                <div className="flex items-center justify-center md:w-[50%]">
                     <h1 className="text-5xl font-bold text-left bg-gradient-to-r from-blue-800  via-blue-600 to-blue-800 bg-clip-text text-transparent">
                         Take The <br /> First Step <br />
                         Towards <br /> Accomplishing <br /> Your <br />
@@ -91,16 +91,16 @@ const Page = () => {
                     </h1>
                 </div>
 
-                <div className="mx-auto pt-8 px-10 flex-1">
+                <div className="ml-6 mr-10  md:mx-auto pt-8 md:px-10 flex-1">
                     <h1 className="text-3xl font-bold mb-8">Contact US</h1>
 
                     <form
 
                         onSubmit={formik.handleSubmit}
-                        className="rounded-2xl space-y-4"
+                        className="rounded-2xl space-y-4   "
                     >
 
-                        <div className="flex gap-10">
+                        <div className="flex md:flex-row flex-col gap-10">
                             <div className="flex-1">
                                 <label className="block font-medium mb-1">Your Name</label>
                                 <input
@@ -121,7 +121,7 @@ const Page = () => {
                                 )}
                             </div>
 
-                            <div className="flex-1">
+                            <div className="flex-1 ">
                                 <label className="block font-medium mb-1">Phone Number</label>
                                 <PhoneInput
                                     country={"in"}
@@ -149,7 +149,7 @@ const Page = () => {
                             </div>
                         </div>
 
-                        <div className="flex gap-10">
+                        <div className="flex gap-10 md:flex-row flex-col md:mt-0 md:pt-2 pt-6">
                             <div className="flex-1">
                                 <label className="block font-medium mb-1">Company Name</label>
                                 <input
@@ -169,7 +169,7 @@ const Page = () => {
                                     value={formik.values.email}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
-                                    className={`w-full border-b p-2 focus:outline-none focus:ring-0 ${formik.touched.email && formik.errors.email
+                                    className={`w-full border-b md:mb-0 mb-6 p-2 focus:outline-none focus:ring-0 ${formik.touched.email && formik.errors.email
                                         ? "border-red-500"
                                         : "border-gray-300"
                                         }`}
@@ -196,9 +196,9 @@ const Page = () => {
                 ))}
 </select>
 </div> */}
-                        <div>
+                        <div className="mb-8 md:mb-2">
                             {" "}
-                            <label className="block font-medium mb-1">Budget</label>{" "}
+                            <label className="block font-medium  md:mb-2 mb-4">Budget</label>{" "}
                             <div className="relative w-full">
                                 {" "}
                                 <button
@@ -226,7 +226,10 @@ const Page = () => {
                                                         name="budget"
                                                         value={option}
                                                         checked={formik.values.budget === option}
-                                                        onChange={formik.handleChange}
+                                                        onChange={(e)=>{
+                                                                        formik.handleChange(e);
+                                                                        setOpen(false)
+                                                        }}
                                                         className="text-blue-600 focus:ring-0"
                                                     />{" "}
                                                     {option}{" "}
@@ -271,18 +274,12 @@ const Page = () => {
                             <label>I agree to receive SMS and WhatsApp</label>
                         </div>
 
-                        <div className="flex">
-                            <div
-                                className="g-recaptcha"
-                                data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                            ></div>
-                        </div>
 
                         <button
                             type="submit"
                             disabled={loading}
                             className={cn(
-                                "w-[100px] font-semibold py-2 rounded-lg transition-all duration-200",
+                                "w-[100px] font-semibold py-2 my-4 rounded-lg transition-all duration-200",
                                 loading
                                     ? "cursor-not-allowed opacity-50 bg-gray-400 text-gray-600"
                                     : "cursor-pointer bg-blue-600 text-white hover:bg-blue-700"

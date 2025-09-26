@@ -56,7 +56,7 @@ const jobOpenings = [
   id: 4,
   title: 'Python Developer (AI/ML)',
   department: 'Engineering',
-  location: 'Hybrid',
+  location: 'Onsite',
   type: 'Full-time',
   experience: '1 - 2 years',
   description: 'Contribute to AI/ML projects by building, training, and deploying machine learning models using Python.',
@@ -210,9 +210,11 @@ export default function CareersPage() {
                   </div>
 
                   <div className="lg:ml-8 lg:flex-shrink-0">
-                    <button className="w-full lg:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    <a href="/contactus">
+                    <button className="w-full cursor-pointer lg:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                       Apply Now
                     </button>
+                    </a>
                   </div>
                 </div>
               </div>
