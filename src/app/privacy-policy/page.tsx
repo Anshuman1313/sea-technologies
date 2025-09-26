@@ -202,7 +202,7 @@ export default function PrivacyPolicyPage() {
                 info@seatechnologies.in
               </a>
               <a 
-                href="/contact" 
+                href="/contactus" 
                 className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition-colors"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
