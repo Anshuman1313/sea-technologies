@@ -200,9 +200,9 @@ export function HealthcareTrust() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-16"
+          className="bg-white rounded-2xl  p-8 shadow-lg border border-gray-100 mb-16"
         >
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 ">
             <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               HIPAA Compliance Guaranteed

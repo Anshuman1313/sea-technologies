@@ -17,8 +17,8 @@ export function ECommerceHero() {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
+      <div className="container  mx-auto px-6 relative z-10">
+        <div className="max-w-4xl max-md:my-5 mx-auto text-center text-white">
           {/* E-Commerce Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

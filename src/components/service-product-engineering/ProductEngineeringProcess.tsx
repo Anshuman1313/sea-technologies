@@ -177,7 +177,7 @@ export function ProductEngineeringProcess() {
                 className={`flex items-center gap-12 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}
               >
                 {/* Enhanced Phase Indicator */}
-                <div className="flex-shrink-0 flex flex-col items-center relative">
+                <div className="flex-shrink-0 max-md:hidden flex flex-col items-center relative">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     className={`w-24 h-24 bg-gradient-to-r ${stage.gradient} rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-xl relative z-10`}
