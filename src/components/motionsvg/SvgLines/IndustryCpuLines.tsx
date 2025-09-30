@@ -1,5 +1,6 @@
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
+import Link from 'next/link';
 
 // Define the interface for a single industry item
 interface Industry {
@@ -40,7 +41,7 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
             </p>
             
             {/* Link/Button */}
-            <a 
+            <Link 
               href={industry.link}
               className="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium text-sm transition-colors duration-200"
             >
@@ -58,7 +59,7 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
                   d="M9 5l7 7-7 7" 
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         );
       })}

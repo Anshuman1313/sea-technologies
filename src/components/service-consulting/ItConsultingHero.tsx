@@ -70,7 +70,7 @@ export function ItConsultingHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-100 via-blue-100 to-indigo-100 text-slate-700 px-6 py-3 rounded-full text-sm font-medium shadow-sm border border-slate-200"
+              className="inline-flex max-md:mt-6 items-center gap-2 bg-gradient-to-r from-slate-100 via-blue-100 to-indigo-100 text-slate-700 px-6 py-3 rounded-full text-sm font-medium shadow-sm border border-slate-200"
             >
               <TrendingUp size={16} />
               Strategic IT Consulting & Digital Transformation

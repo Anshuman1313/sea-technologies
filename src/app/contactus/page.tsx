@@ -35,6 +35,9 @@ const Page = () => {
             yourName: Yup.string()
                 .required("Name is required")
                 .min(3, "Name must be at least 3 characters"),
+            companyName: Yup.string()
+                .required("Company name is required")
+                .min(5, "Company name must be at least 5 characters"),
             phoneNumber: Yup.string()
                 .required("Phone number is required")
                 .matches(/^\d{10,15}$/, "Enter a valid phone number"),
@@ -146,7 +149,9 @@ const Page = () => {
                                     onChange={(phone) =>
                                         formik.setFieldValue("phoneNumber", phone)
                                     }
-                                    inputProps={{ name: "phoneNumber" }}
+                                    inputProps={{ name: "phoneNumber",
+                                        onBlur: () => formik.setFieldTouched("phoneNumber", true)
+                                     }}
                                     containerClass="w-full relative"
                                     inputClass="!w-full !p-2 !pl-14 !focus:outline-none !focus:ring-0 !border-0 border-b !shadow-none !bg-transparent"
                                     buttonClass="!border-0 !bg-transparent !absolute !left-0 flex items-center justify-center"
@@ -180,8 +185,17 @@ const Page = () => {
                                     name="companyName"
                                     value={formik.values.companyName}
                                     onChange={formik.handleChange}
-                                    className="w-full border-b p-2 focus:outline-none focus:ring-0"
+                                    onBlur={formik.handleBlur}
+                                     className={`w-full border-b p-2 focus:outline-none focus:ring-0 ${formik.touched.companyName && formik.errors.companyName
+                                        ? "border-red-500"
+                                        : "border-gray-300"
+                                        }`}
                                 />
+                                {formik.touched.companyName && formik.errors.companyName && (
+                                    <p className="text-red-500 text-sm">
+                                        {formik.errors.companyName}
+                                    </p>
+                                )}
                             </div>
 
                             <div className="flex-1">

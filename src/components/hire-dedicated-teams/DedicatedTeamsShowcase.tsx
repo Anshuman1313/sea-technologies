@@ -211,10 +211,10 @@ export function DedicatedTeamsShowcase() {
                     </div>
 
                     {/* CTA */}
-                    <a href="/contactus">
+                    <Link href="/contactus">
                    <Button className={`w-full cursor-pointer bg-${team.color}-600 hover:bg-${team.color}-700 text-white`}>
                       Build This Team
-                    </Button> </a>
+                    </Button> </Link>
                   </CardContent>
                 </Card>
               </motion.div>

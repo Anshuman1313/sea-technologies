@@ -70,7 +70,7 @@ export function UiUxDesignHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 via-pink-100 to-orange-100 text-purple-700 px-6 py-3 rounded-full text-sm font-medium shadow-sm border border-purple-100"
+              className="inline-flex max-md:mt-6 items-center gap-2 bg-gradient-to-r from-purple-100 via-pink-100 to-orange-100 text-purple-700 px-6 py-3 rounded-full text-sm font-medium shadow-sm border border-purple-100"
             >
               <Palette size={16} />
               Creative UI/UX Design Studio

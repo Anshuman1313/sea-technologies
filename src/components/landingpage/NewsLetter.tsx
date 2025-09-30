@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
+import Link from 'next/link'
 
 export function Newsletter() {
   const [email, setEmail] = useState('')
@@ -131,9 +132,9 @@ export function Newsletter() {
             {/* Privacy Policy */}
             <p className="text-sm text-gray-500">
               We care about your data in our{' '}
-              <a href="/privacy-policy" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">
+              <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">
                 privacy policy
-              </a>
+              </Link>
               .
             </p>
           </div>

@@ -60,7 +60,7 @@ export function WebTechHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium"
+              className="inline-flex items-center max-sm:mt-6  gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium"
             >
               <Zap size={16} />
               Modern Web Development
