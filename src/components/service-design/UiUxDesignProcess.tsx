@@ -182,7 +182,7 @@ export function UiUxDesignProcess() {
                 className={`flex items-center gap-16 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}
               >
                 {/* Creative Phase Indicator */}
-                <div className="flex-shrink-0 flex flex-col items-center relative">
+                <div className="flex-shrink-0 max-md:hidden flex flex-col items-center relative">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className={`w-28 h-28 bg-gradient-to-r ${stage.gradient} rounded-3xl flex items-center justify-center text-white font-bold text-3xl shadow-2xl relative z-10 border-4 border-white`}

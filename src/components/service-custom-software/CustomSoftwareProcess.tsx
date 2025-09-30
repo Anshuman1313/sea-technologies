@@ -156,7 +156,7 @@ export function CustomSoftwareProcess() {
                 className={`flex items-center gap-8 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}
               >
                 {/* Phase Number & Icon */}
-                <div className="flex-shrink-0 flex flex-col items-center">
+                <div className="flex-shrink-0 flex max-md:hidden flex-col items-center">
                   <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                     {phase.phase}
                   </div>

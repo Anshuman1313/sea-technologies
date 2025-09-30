@@ -73,8 +73,8 @@ const LogoSection = () => {
                             }}
                             className="relative z-10 overflow-hidden  h-25 w-40  "
                         >
-                           <Image
-                           suppressHydrationWarning
+                           <img
+                           
                            src={`/logos2/logo${num}.png`}
                            alt={`Logo ${i}`}
                            height={80}
