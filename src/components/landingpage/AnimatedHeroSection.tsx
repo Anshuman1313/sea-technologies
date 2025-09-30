@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { BackgroundGraphics } from "../motionsvg/background-graphics";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 
 export function AnimatedHeroSection() {
@@ -73,7 +74,7 @@ export function AnimatedHeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-             <a href="/contactus">
+             <Link href="/contactus">
           <Button 
 
             size="lg" 
@@ -89,8 +90,8 @@ export function AnimatedHeroSection() {
               →
             </motion.div>
           </Button>
-          </a>
-           <a href="/about/story">
+          </Link>
+           <Link href="/about/story">
           <Button 
             variant="outline" 
             size="lg"
@@ -98,7 +99,7 @@ export function AnimatedHeroSection() {
           >
             Learn More
           </Button>
-          </a>
+          </Link>
         </motion.div>
         
         <motion.div

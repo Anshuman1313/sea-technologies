@@ -70,7 +70,7 @@ export function ProductEngineeringHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-5 py-3 rounded-full text-sm font-medium shadow-sm"
+              className="inline-flex max-md:mt-6 items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-5 py-3 rounded-full text-sm font-medium shadow-sm"
             >
               <Rocket size={16} />
               Complete Product Engineering

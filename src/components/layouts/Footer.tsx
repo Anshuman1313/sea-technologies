@@ -101,6 +101,7 @@ const Footer: React.FC = () => {
               {/* LinkedIn */}
               <Link
                 href="https://www.linkedin.com/company/sea-technologies-in/?viewAsMember=true"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <span className="sr-only">LinkedIn</span>
@@ -166,7 +167,7 @@ const Footer: React.FC = () => {
 
             {/* Copyright */}
             <div className="text-sm text-gray-500">
-              <p>&copy; 2025 SeaTechnologies. All rights reserved.</p> <p className="hover:text-white"><a href="/privacy-policy">Privacy</a></p>
+              <p>&copy; 2025 SeaTechnologies. All rights reserved.</p> <p className="hover:text-white"><Link href="/privacy-policy">Privacy</Link></p>
             </div>
           </div>
         </div>

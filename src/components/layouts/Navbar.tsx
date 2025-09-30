@@ -224,7 +224,7 @@ const Navbar: React.FC = () => {
 
                     {/* Mobile menu button */}
                     <div className="md:hidden flex items-center gap-2">
-                           <a href="/contactus"><Button >Start</Button></a>
+                           <Link href="/contactus"><Button >Start</Button></Link>
                         <button
                             onClick={toggleMobileMenu}
                             className="text-gray-700 hover:text-black focus:outline-none focus:text-black p-2"

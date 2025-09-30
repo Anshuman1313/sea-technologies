@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Careers | SeaTechnologies',
@@ -210,11 +211,11 @@ export default function CareersPage() {
                   </div>
 
                   <div className="lg:ml-8 lg:flex-shrink-0">
-                    <a href="/contactus">
+                    <Link href="/contactus">
                     <button className="w-full cursor-pointer lg:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                       Apply Now
                     </button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -230,11 +231,11 @@ export default function CareersPage() {
               We're always looking for talented individuals. Send us your resume and let us know 
               how you'd like to contribute to SeaTechnologies.
             </p>
-            <a href="/contactus">
+            <Link href="/contactus">
             <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
               Submit General Application
             </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -369,18 +370,18 @@ export default function CareersPage() {
             Take the next step in your career and join our innovative team at SeaTechnologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <Link 
               href="/contactus" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
             >
               Apply Now
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/contactus" 
               className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors"
             >
               Have Questions?
-            </a>
+            </Link>
           </div>
         </div>
       </div>
