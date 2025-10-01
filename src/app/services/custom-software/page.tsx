@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function CustomSoftwarePage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white contain-content">
       <CustomSoftwareHero />
       <CustomSoftwareServices />
       <CustomSoftwareProcess />
