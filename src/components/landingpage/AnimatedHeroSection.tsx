@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { BackgroundGraphics } from "../motionsvg/background-graphics";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { BorderBeam } from "../ui/border-beam";
 
 
 export function AnimatedHeroSection() {
@@ -17,13 +18,13 @@ export function AnimatedHeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.8]);
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="min-h-screen  flex items-center justify-center px-6 py-12 bg-gradient-to-b from-background to-background/50 relative overflow-hidden"
     >
       <BackgroundGraphics />
       {/* <OceanLinesBackground/> */}
-      <motion.div 
+      <motion.div
         className="max-w-4xl mx-auto text-center space-y-8 relative z-10"
         style={{ y, opacity }}
       >
@@ -40,10 +41,14 @@ export function AnimatedHeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 backdrop-blur-sm"
             >
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 max-md:bg-blue-600 bg-blue-800 rounded-full animate-pulse"></div>
               <span className="text-sm text-muted-foreground">AI-Powered IT Solutions</span>
+              <BorderBeam
+                duration={4} size={30}
+                className="from-transparent via-blue-500 to-transparent"
+              />
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -56,52 +61,52 @@ export function AnimatedHeroSection() {
               </span>
             </motion.h1>
           </div>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           >
-            Harness the power of AI to unlock unlimited creativity in your IT projects. 
+            Harness the power of AI to unlock unlimited creativity in your IT projects.
             From concept to execution, we make the impossible possible with cutting-edge technology and innovative solutions.
           </motion.p>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-             <Link href="/contactus">
-          <Button 
+          <Link href="/contactus">
+            <Button
 
-            size="lg" 
-            className="px-8 py-3 cursor-pointer text-base bg-black hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
-          >
-            
-           Start Your Journey
-            <motion.div
-              className="pb-[2px] md:ml-2"
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              size="lg"
+              className="px-8 py-3 cursor-pointer text-base bg-black hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
-              →
-            </motion.div>
-          </Button>
+
+              Start Your Journey
+              <motion.div
+                className="pb-[2px] md:ml-2"
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                →
+              </motion.div>
+            </Button>
           </Link>
-           <Link href="/about/story">
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="px-8 cursor-pointer py-3 text-base border-2 hover:border-primary/50 transition-all duration-300"
-          >
-            Learn More
-          </Button>
+          <Link href="/about/story">
+            <Button
+              variant="outline"
+              size="lg"
+              className="px-8 cursor-pointer py-3 text-base border-2 hover:border-primary/50 transition-all duration-300"
+            >
+              Learn More
+            </Button>
           </Link>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

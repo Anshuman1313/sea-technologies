@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               href="/"
               className="text-2xl font-bold text-white tracking-wide"
             >
-              SEATECHNOLOGIES
+              SEA TECHNOLOGIES
             </Link>
 
             <p className="mt-4 text-sm text-gray-400 leading-relaxed max-w-md">

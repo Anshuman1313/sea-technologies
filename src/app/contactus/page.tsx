@@ -113,7 +113,7 @@ const Page = () => {
                 </div>
 
                 <div className="ml-6 mr-10  md:mx-auto pt-8 md:px-10 flex-1">
-                    <h1 className="text-3xl font-bold mb-8">Contact US</h1>
+                    <h1 className="text-3xl font-bold mb-8">Contact Us</h1>
 
                     <form
 
