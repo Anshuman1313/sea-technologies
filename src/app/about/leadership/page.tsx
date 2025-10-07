@@ -18,13 +18,14 @@ const teamMembers = [
 },
 {
   id: 2,
-  name: 'Nitish Bhardwaj',
-  role: 'Business Development Manager',
-  bio: 'Nitish specializes in strategic partnerships and growth initiatives. With a strong background in sales and client relations, he focuses on expanding market reach and building long-term collaborations.',
+  name: 'Alam Geer',
+  role: 'VP of Engineering/IT Development',
+  bio: 'Alam leads the engineering and IT development teams with a focus on innovation, scalability, and technical excellence. With years of experience in software architecture and project management, he ensures that technology solutions align with business goals and deliver impactful results.',
   image: '/images/team/placeholder-male.jpg',
   linkedin: '#',
-  email: 'nitish@company.com',
+  email: 'alam@company.com',
 },
+
 {
   id: 3,
   name: 'Sunny T.',
@@ -33,7 +34,16 @@ const teamMembers = [
   image: '/images/team/placeholder-male.jpg',
   linkedin: '#',
   email: 'sunny@company.com',
-}
+},
+{
+  id: 4,
+  name: 'Nitish Bhardwaj',
+  role: 'Business Development Manager',
+  bio: 'Nitish specializes in strategic partnerships and growth initiatives. With a strong background in sales and client relations, he focuses on expanding market reach and building long-term collaborations.',
+  image: '/images/team/placeholder-male.jpg',
+  linkedin: '#',
+  email: 'nitish@company.com',
+},
   
 ];
 
