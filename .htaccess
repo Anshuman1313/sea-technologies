@@ -1,23 +1,20 @@
-# Make index.html the default
+# Make index.html the default 
 DirectoryIndex index.html
 
 RewriteEngine On
 RewriteBase /
 
-# 1️ Serve existing files or directories directly
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+# If the request is for a real file or directory, serve it directly
+ RewriteCond %{REQUEST_FILENAME} -f [OR]
+ RewriteCond %{REQUEST_FILENAME} -d
+ RewriteRule ^ - [L]
 
-# 2️ Serve all files in /public directly (robots.txt, favicon, images, etc.)
-RewriteCond %{REQUEST_URI} !^/index\.html$
-RewriteCond %{REQUEST_URI} !^/.*\.html$
-RewriteCond %{REQUEST_URI} !^/.*\.(css|js|png|jpg|jpeg|gif|ico|svg|webp|xml|txt)$
-RewriteRule ^ - [L]
+ # If a matching .html file exists, serve it
+ # Example: /about → about.html
+ # /industries/ecommerce → industries/ecommerce.html
+ RewriteCond %{DOCUMENT_ROOT}/$1.html -f 
+ RewriteRule ^(.+?)/?$ $1.html [L]
 
-# 3️ If a matching .html file exists, serve it
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^(.+?)/?$ $1.html [L]
-
-# 4️ Fallback: serve index.html for client-side routing or 404
-RewriteRule ^ index.html [L]
+ # Fallback: if nothing matches, serve index.html
+ # (useful for client-side routing or 404 handling)
+ RewriteRule ^ index.html [L]
