@@ -7,7 +7,7 @@ import { CustomSoftwareServices } from '@/components/service-custom-software/Cus
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Custom Software Development Services | Tailored Business Solutions',
+  title: 'Custom Software Development Services | Tailored Business Solutions - Sea Technologies',
   description: 'Professional custom software development services. Build scalable, tailored solutions designed specifically for your business needs and workflows.',
 }
 

@@ -8,6 +8,7 @@ interface Industry {
   description: string;
   link: string;
   icon: LucideIcon;
+  linkText:string;
 }
 
 // Define the component props interface
@@ -45,6 +46,7 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
               href={industry.link}
               className="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium text-sm transition-colors duration-200"
             >
+              <span className='sr-only'>{industry.linkText}</span>
               Learn More
               <svg 
                 className="w-4 h-4 ml-1" 

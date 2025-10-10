@@ -4,7 +4,7 @@ import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FinTech Solutions | Banking, Payments & Blockchain Development',
+  title: 'FinTech Solutions | Banking, Payments & Blockchain Development - Sea Technologies',
   description: 'Secure, scalable FinTech solutions for banking, payments, and blockchain. Trusted by financial institutions worldwide.',
 }
 

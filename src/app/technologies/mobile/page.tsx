@@ -7,7 +7,7 @@ import { MobileTechShowcase } from '@/components/techmobile/MobileTechShowcase'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development | iOS & Android Apps with React Native & Flutter',
+  title: 'Mobile App Development | iOS & Android Apps with React Native & Flutter - Sea Technologies',
   description: 'Professional mobile app development services using React Native, Flutter, and native iOS/Android. Build cross-platform mobile applications.',
 }
 

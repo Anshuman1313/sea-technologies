@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
                 { label: 'Healthcare', href: '/industries/healthcare', description: 'HIPAA compliant health tech apps' },
                 { label: 'E-Commerce', href: '/industries/ecommerce', description: 'Online stores & marketplaces' },
                 { label: 'Education', href: '/industries/education', description: 'E-learning & EdTech platforms' },
-                { label: 'Logistics', href: '/industries/logistics', description: 'Supply chain & transport systems' }
+                { label: 'Logistics', href: 'tics', description: 'Supply chain & transport systems' }
             ]
         },
         {
@@ -224,7 +224,7 @@ const Navbar: React.FC = () => {
 
                     {/* Mobile menu button */}
                     <div className="md:hidden flex items-center gap-2">
-                           <Link href="/contactus"><Button >Start</Button></Link>
+                           {/* <Link href="/contactus"><Button >Start</Button></Link> */}
                         <button
                             onClick={toggleMobileMenu}
                             className="text-gray-700 hover:text-black focus:outline-none focus:text-black p-2"

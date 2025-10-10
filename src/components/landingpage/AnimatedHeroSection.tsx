@@ -102,6 +102,7 @@ export function AnimatedHeroSection() {
               size="lg"
               className="px-8 cursor-pointer py-3 text-base border-2 hover:border-primary/50 transition-all duration-300"
             >
+              <span className="sr-only">Read about Sea Technologies’ company story and journey</span>
               Learn More
             </Button>
           </Link>

@@ -5,7 +5,7 @@ import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Hire Backend Developers | Node.js, .NET, Java & More Experts',
+  title: 'Hire Backend Developers | Node.js, .NET, Java & More Experts - Sea Technologies',
   description: 'Hire expert backend developers specializing in Node.js, .NET, Java, Python, and modern server-side technologies. Start in 48 hours.',
 }
 

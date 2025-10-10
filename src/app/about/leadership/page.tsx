@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Leadership | Your Company',
+  title: 'Leadership | Sea Technologies',
   description: 'Meet our core team - Learn about our leadership and executive team',
 };
 
@@ -29,7 +29,7 @@ const teamMembers = [
 {
   id: 3,
   name: 'Sunny T.',
-  role: 'Vice President',
+  role: 'Vice President of Operations',
   bio: 'Sunny brings leadership and operational expertise to the organization. He plays a key role in aligning business strategy with execution, ensuring sustainable growth and team success.',
   image: '/images/team/placeholder-male.jpg',
   linkedin: '#',

@@ -126,37 +126,45 @@ export const industriesBottom = [
     description: "Solutions for property management, smart housing, construction, and digital real estate platforms.",
     link: "/industries/ecommerce",
     icon: Building,
+    linkText: "Explore our Real Estate software solutions and digital property management platforms"
   },
   {
     title: "Banking",
     description: "Digital banking, core banking solutions, fraud detection, and secure financial services.",
     link: "/industries/fintech",
     icon: Banknote,
+    linkText: "Learn more about Sea Technologies' Banking software and digital financial solutions"
   },
   {
     title: "Healthcare",
     description: "Healthcare management systems, telemedicine, patient record management, and digital diagnostics.",
     link: "/industries/healthcare",
     icon: HeartPulse,
+    linkText: "Discover our Healthcare software solutions including telemedicine and patient management systems"
   },
 ];
+
 export const industriesTop = [
   {
     title: "Travel & Hospitality",
     description: "Booking engines, guest management, personalized experiences, and smart travel planning.",
     link: "/industries/logistics",
     icon: Plane,
+    linkText: "Explore Travel & Hospitality solutions like booking engines and guest management platforms"
   },
   {
     title: "Manufacturing",
     description: "IoT-driven factories, predictive maintenance, robotics automation, and production analytics.",
     link: "/industries/ecommerce",
     icon: Factory,
+    linkText: "Learn more about Manufacturing software solutions with IoT, automation, and analytics"
   },
   {
     title: "Insurance",
     description: "Policy management systems, claim automation, fraud detection, and risk assessment tools.",
     link: "/industries/education",
     icon: ShieldCheck,
+    linkText: "Discover Insurance software solutions for policy, claims, and risk management"
   },
 ];
+

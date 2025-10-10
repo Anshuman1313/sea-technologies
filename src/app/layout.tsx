@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Best Software Development Company",
-  description: "Sea tech company",
+  title: "Best Software Development Company - Sea Technologies",
+  description: "Sea Technologies is the best software development company in India delivering custom web, mobile app, and cloud solutions for businesses worldwide.",
 };
 
 export default function RootLayout({

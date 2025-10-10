@@ -7,7 +7,7 @@ import { MlModelsShowcase } from '@/components/techai/MlModelsShowcase'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AI & Data Science Solutions | ML Models, AI Integration & Data Analytics',
+  title: 'AI & Data Science Solutions | ML Models, AI Integration & Data Analytics - Sea Technologies',
   description: 'Professional AI and data science services. Build machine learning models, integrate AI solutions, and perform advanced data analytics.',
 }
 

@@ -5,7 +5,7 @@ import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Education Solutions | E-learning & EdTech Platform Development',
+  title: 'Education Solutions | E-learning & EdTech Platform Development - Sea Technologies',
   description: 'Custom e-learning and EdTech solutions for schools, universities, and online education providers. Engaging platforms that transform learning experiences.',
 }
 

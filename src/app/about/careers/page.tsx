@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Careers | SeaTechnologies',
-  description: 'Join SeaTechnologies - Explore career opportunities and become part of our innovative team',
+  title: 'Careers | Sea Technologies',
+  description: 'Join Sea Technologies - Explore career opportunities and become part of our innovative team',
 };
 
 // Sample job openings data - replace with your actual job listings
