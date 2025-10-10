@@ -8,21 +8,23 @@ import { AnimatedHeroSection } from "../components/landingpage/AnimatedHeroSecti
 export default function Home() {
   return (
     <div>
-        <Navbar />
-       
-          
-          <AnimatedHeroSection />
-       
+      <Navbar />
+      <main>
+
+
+        <AnimatedHeroSection />
+
         <div className="bg-white  md:px-10 md:pb-17 border-b-[1px] border-neutral-200 ">
-          <LogoSection/>
+          <LogoSection />
         </div>
-           
+
         <div className="bg-white ">
           <Industries />
         </div>
         <div className="bg-white my-20 ">
-          <Newsletter/>
+          <Newsletter />
         </div>
+      </main>
     </div>
   );
 }

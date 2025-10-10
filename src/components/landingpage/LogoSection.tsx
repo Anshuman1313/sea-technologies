@@ -13,7 +13,6 @@ const allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
 function getRandomUniqueArray(arr:any, n:any) {
     // Fisher-Yates shuffle
     const shuffled = arr.slice().sort(() => Math.random() - 0.5);
-    console.log(shuffled.slice(0, n), "shuffled sliced (0,n)");
     return shuffled.slice(0, n);
 }
 

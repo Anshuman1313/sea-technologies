@@ -7,7 +7,7 @@ import { ProductEngineeringShowcase } from '@/components/service-product-enginee
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Product Engineering Services | From MVP to Full-Scale Product',
+  title: 'Product Engineering Services | From MVP to Full-Scale Product - Sea Technologies',
   description: 'Complete product engineering services from MVP development to full-scale products. Build, launch, and scale your digital product with expert engineering.',
 }
 

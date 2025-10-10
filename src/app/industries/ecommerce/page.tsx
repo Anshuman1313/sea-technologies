@@ -5,7 +5,7 @@ import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Solutions | Online Stores & Marketplaces Development',
+  title: 'E-Commerce Solutions | Online Stores & Marketplaces Development - Sea Technologies',
   description: 'Custom e-commerce solutions for online stores and marketplaces. Scalable platforms that drive sales and enhance customer experience.',
 }
 

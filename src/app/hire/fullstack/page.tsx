@@ -4,7 +4,7 @@ import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Hire Full Stack Developers | End-to-End Development Expertise',
+  title: 'Hire Full Stack Developers | End-to-End Development Expertise - Sea Technologies',
   description: 'Hire expert full stack developers with end-to-end development expertise. Frontend, backend, and database specialists ready to build complete solutions.',
 }
 

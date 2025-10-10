@@ -4,7 +4,7 @@ import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Logistics Solutions | Supply Chain & Transport Management Systems',
+  title: 'Logistics Solutions | Supply Chain & Transport Management Systems - Sea Technologies',
   description: 'Advanced logistics and supply chain management solutions for transport companies, warehouses, and distribution networks. Optimize operations and reduce costs.',
 }
 

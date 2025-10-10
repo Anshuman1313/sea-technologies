@@ -7,7 +7,7 @@ import { ItConsultingServices } from '@/components/service-consulting/ItConsulti
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'IT Consulting Services | Strategic Guidance for Digital Transformation',
+  title: 'IT Consulting Services | Strategic Guidance for Digital Transformation - Sea Technologies',
   description: 'Expert IT consulting services for digital transformation. Strategic technology guidance, implementation planning, and business optimization.',
 }
 

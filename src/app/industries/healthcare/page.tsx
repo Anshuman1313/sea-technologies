@@ -5,7 +5,7 @@ import { Newsletter } from '@/components/landingpage/NewsLetter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Healthcare Solutions | HIPAA Compliant Health Tech Apps',
+  title: 'Healthcare Solutions | HIPAA Compliant Health Tech Apps - Sea Technologies',
   description: 'HIPAA compliant healthcare applications for hospitals, clinics, and health tech companies. Secure, scalable, and regulatory-compliant solutions.',
 }
 

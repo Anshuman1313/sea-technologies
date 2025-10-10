@@ -7,7 +7,7 @@ import { DevOpsPipelines } from '@/components/techcloud/DevOpsPipelines'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cloud & DevOps Solutions | AWS, Azure, GCP with CI/CD Pipelines',
+  title: 'Cloud & DevOps Solutions | AWS, Azure, GCP with CI/CD Pipelines - Sea Technologies',
   description: 'Professional cloud infrastructure and DevOps services using AWS, Azure, GCP. Build scalable CI/CD pipelines and automate your deployments.',
 }
 

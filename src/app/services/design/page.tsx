@@ -7,7 +7,7 @@ import { UiUxDesignServices } from '@/components/service-design/UiUxDesignServic
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'UI/UX Design Services | User-Centric Interfaces & Experiences',
+  title: 'UI/UX Design Services | User-Centric Interfaces & Experiences - Sea Technologies',
   description: 'Professional UI/UX design services. Create intuitive, engaging user interfaces and exceptional user experiences that drive engagement and conversion.',
 }
 
