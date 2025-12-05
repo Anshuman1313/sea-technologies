@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
       <main>
 
-      
+
         <AnimatedHeroSection />
 
         <div className="bg-white  md:px-10 md:pb-17 border-b-[1px] border-neutral-200 ">
@@ -26,7 +26,7 @@ export default function Home() {
           <BlurryCursorSection />
 
         </div>
-        <div className="bg-white my-20 ">
+        <div className="bg-white mb-10">
           <Newsletter />
         </div>
       </main>

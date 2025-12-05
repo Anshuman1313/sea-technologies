@@ -132,25 +132,25 @@ const Navbar: React.FC = () => {
     return (
         <nav className={`  ${scrolled ? "bg-white/80  "  : "bg-white/10 "} border-b-[1px] border-neutral-200  backdrop-blur-md  sticky top-0 z-50    transition-all duration-300`}>
             <div className={`mx-auto px-5 sm:px-6 lg:px-8  `}>
-                <div className="flex justify-between items-center h-13 md:h-15 md:px-3 ">
+                <div className="flex justify-between items-center h-13 lg:h-15 lg:px-3 ">
                     {/* Logo */}
                     <div className="flex-shrink-0 cursor-pointer ">
                         <Link
                             href="/"
                             className={`font-bold  tracking-wide text-black transition-all duration-300`}
                         >
-                           <div className='hidden  md:block'>
+                           <div className='hidden  lg:block'>
                             
                             <LogoAnimation/>
                             </div>
-                            <div className='md:hidden text-xl'>
+                            <div className='lg:hidden text-xl'>
                                 <span>SEA</span> <span className='text-blue-400'> TECHNOLOGIES</span>
                             </div>
                         </Link>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:block">
+                    <div className="hidden lg:block">
                         <div className="ml-10 flex items-baseline space-x-8">
                             {navItems.map((item, index) => (
                                 <div
@@ -210,7 +210,7 @@ const Navbar: React.FC = () => {
                     </div>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden md:flex md:gap-2 ">
+                    <div className="hidden lg:flex lg:gap-2 ">
                         <div className='hidden'>
                             <ModeToggle/>
                         </div>
@@ -223,7 +223,7 @@ const Navbar: React.FC = () => {
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden flex items-center gap-2">
+                    <div className="lg:hidden flex items-center gap-2">
                            {/* <Link href="/contactus"><Button >Start</Button></Link> */}
                         <button
                             onClick={toggleMobileMenu}
@@ -243,7 +243,7 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Navigation Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200 shadow-lg">
                         {navItems.map((item, index) => (
                             <div key={index} className="block">
