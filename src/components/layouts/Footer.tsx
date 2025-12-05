@@ -167,7 +167,7 @@ const Footer: React.FC = () => {
 
             {/* Copyright */}
             <div className="text-sm text-gray-500">
-              <p>&copy; 2025 SeaTechnologies. All rights reserved. <span className="hover:text-white"><Link href="/privacy-policy"> Privacy</Link></span></p> 
+              <p>&copy; 2025 SeaTechnologies. All rights reserved. <span className="hover:text-white"><Link href="/privacy-policy"> Privacy Policy</Link></span></p> 
             </div>
           </div>
         </div>
