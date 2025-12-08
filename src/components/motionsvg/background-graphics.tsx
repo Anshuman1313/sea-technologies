@@ -1,5 +1,22 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
+import RadialGradient from "../gsap/RadialGradient";
+import React from "react";
+import { Water } from "@paper-design/shaders-react";
+import WaterGradient from "../gsap/WaterGradient";
+import AceternityBg from "../gsap/AceternityBg";
+const PATH_D =
+  "M45.119 4.5a11.5 11.5 0 0 0-11.277 9.245l-25.6 128C6.82 148.861 12.262 155.5 19.52 155.5h63.366a11.5 11.5 0 0 0 11.277-9.245l25.6-128c1.423-7.116-4.02-13.755-11.277-13.755H45.119Z";
+
+// box type
+type Box = {
+  id: string;
+  x: number;
+  y: number;
+};
+
+// snapped result type
+type Snapped = { x: number; y: number };
 
 export function BackgroundGraphics() {
   const mouseX = useMotionValue(0);
@@ -43,24 +60,142 @@ export function BackgroundGraphics() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [mouseX, mouseY, input]);
+  const containerRef = React.useRef<HTMLDivElement | null>(null);
+    const innerSvgRef = React.useRef<SVGSVGElement | null>(null);
+  
+    const [boxes, setBoxes] = React.useState<Box[]>([]);
+  
+    // for throttling + dedupe
+    const lastSnappedRef = React.useRef<Snapped | null>(null);
+    const lastTimeRef = React.useRef<number>(0);
+  
+    const COOLDOWN = 70; // ms (tweak for smoother or snappier feel)
+  
+    // 🔥 REAL ACETERNITY SNAPPING
+    const snapPointerToGrid = (px: number, py: number): Snapped => {
+      // row height = 160px
+      const row = Math.round(py / 160);
+  
+      // undo the staggered horizontal offset: 96 * col - 32 * row
+      const col = Math.round((px + 32 * row) / 96);
+  
+      // compute final exact coordinates
+      const x = 96 * col - 32 * row;
+      const y = 160 * row;
+  
+      return { x, y };
+    };
+  
+    // spawn a temporary animated box
+    const spawnBox = (x: number, y: number) => {
+      const id = crypto.randomUUID();
+  
+      // add
+      setBoxes((prev) => [...prev, { id, x, y }]);
+  
+      // remove after animation duration
+      setTimeout(() => {
+        setBoxes((prev) => prev.filter((b) => b.id !== id));
+      }, 1000); // matches animation time
+    };
+  
+    // pointer move handler
+    const handlePointerMove = (
+      e: React.PointerEvent<HTMLDivElement>
+    ) => {
+      if (!containerRef.current) return;
+  
+      const rect = containerRef.current.getBoundingClientRect();
+      const innerSvg = innerSvgRef.current?.getBoundingClientRect();
+      if (!innerSvg) return;
+      const px = e.clientX - innerSvg.left;
+      const py = e.clientY - rect.top;
+  
+      // Compensation for <motion.svg x="50%" y="-96">
+      const pxSvg = px - innerSvg.width / 2;
+      const pySvg = py + 96;
+  
+      const snapped = snapPointerToGrid(pxSvg -50, pySvg );
+  
+      const now = Date.now();
+  
+      // throttle
+      if (now - lastTimeRef.current < COOLDOWN) return;
+  
+      // dedupe: if same grid cell, skip
+      if (
+        lastSnappedRef.current &&
+        lastSnappedRef.current.x === snapped.x &&
+        lastSnappedRef.current.y === snapped.y
+      ) {
+        return;
+      }
+  
+      lastSnappedRef.current = snapped;
+      lastTimeRef.current = now;
+  
+      spawnBox(snapped.x, snapped.y);
+    };
   
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <svg width="100%" height="100%" className="absolute inset-0">
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+    <div className="absolute inset-0 overflow-hidden ">
+      <RadialGradient/>
+      
+      <div className="absolute inset-0 opacity-[1] "
+      ref={containerRef}
+       onPointerMove={handlePointerMove}
+      >
+             <motion.svg
+               aria-hidden="true"
+               ref={innerSvgRef}
+               className="absolute  inset-x-0 -top-20 z-10 h-[1000px] w-full fill-blue-100 stroke-neutral-900/7
+               "
+             >
+               <rect
+                 width="100%"
+                 height="100%"
+                 fill="url(#grid-pattern)"
+                 strokeWidth="0"
+               />
+       
+               {/* Your static paths stay the same */}
+               <motion.svg x="50%" y="-96" strokeWidth="0" className="overflow-visible ">
+                
+       
+                 {/*  Dynamic spawned boxes */}
+                 {boxes.map((box) => (
+                   <motion.path
+                     key={box.id}
+                     d={PATH_D}
+                     transform={`translate(${box.x} ${box.y})`}
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: [0, 1, 0] }}
+                     transition={{ duration: 1, ease: "easeOut" }}
+                     pointerEvents="none"
+                   />
+                 ))}
+               </motion.svg>
+       
+               {/* pattern defs */}
+               <defs>
+                 <pattern
+                   id="grid-pattern"
+                   width="96"
+                   height="480"
+                   x="50%"
+                   patternUnits="userSpaceOnUse"
+                   patternTransform="translate(0 -96)"
+                   fill="none"
+                 >
+                   <path d="M128 0 98.572 147.138A16 16 0 0 1 82.883 160H13.117a16 16 0 0 0-15.69 12.862l-26.855 134.276A16 16 0 0 1-45.117 320H-116M64-160 34.572-12.862A16 16 0 0 1 18.883 0h-69.766a16 16 0 0 0-15.69 12.862l-26.855 134.276A16 16 0 0 1-109.117 160H-180M192 160l-29.428 147.138A15.999 15.999 0 0 1 146.883 320H77.117a16 16 0 0 0-15.69 12.862L34.573 467.138A16 16 0 0 1 18.883 480H-52M-136 480h58.883a16 16 0 0 0 15.69-12.862l26.855-134.276A16 16 0 0 1-18.883 320h69.766a16 16 0 0 0 15.69-12.862l26.855-134.276A16 16 0 0 1 109.117 160H192M-72 640h58.883a16 16 0 0 0 15.69-12.862l26.855-134.276A16 16 0 0 1 45.117 480h69.766a15.999 15.999 0 0 0 15.689-12.862l26.856-134.276A15.999 15.999 0 0 1 173.117 320H256M-200 320h58.883a15.999 15.999 0 0 0 15.689-12.862l26.856-134.276A16 16 0 0 1-82.883 160h69.766a16 16 0 0 0 15.69-12.862L29.427 12.862A16 16 0 0 1 45.117 0H128" />
+                 </pattern>
+               </defs>
+             </motion.svg>
       </div>
 
       {/* Animated connecting lines */}
       <motion.svg
-        className="absolute inset-0 w-full h-full"
+        className="absolute hidden inset-0 w-full h-full "
         viewBox="0 0 1200 800"
         style={{ x: parallaxX1, y: parallaxY1 }}
       >
@@ -89,7 +224,6 @@ export function BackgroundGraphics() {
           fill="none"
           stroke="url(#lineGradient)"
           strokeWidth="1"
-          className="text-primary/20"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 3, delay: 1, ease: "easeInOut" }}
@@ -98,8 +232,7 @@ export function BackgroundGraphics() {
           d="M-100,600 Q200,500 500,550 T1300,500"
           fill="none"
           stroke="url(#lineGradient)"
-          strokeWidth="2"
-          className="text-primary/15"
+          strokeWidth="1"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 3.5, delay: 1.5, ease: "easeInOut" }}
@@ -110,7 +243,6 @@ export function BackgroundGraphics() {
           fill="none"
           stroke="url(#lineGradient)"
           strokeWidth="1"
-          className="text-primary/10 "
           transform="translate(0, -50)"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
@@ -154,7 +286,7 @@ export function BackgroundGraphics() {
 
       {/* Floating dots with connections */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute hidden inset-0"
         style={{ x: parallaxX2, y: parallaxY2 }}
       >
         {/* Top left cluster */}
@@ -245,35 +377,10 @@ export function BackgroundGraphics() {
         </motion.div>
       </motion.div>
 
-      {/* Subtle graph-like elements */}
-      <motion.div
-        className="absolute top-1/4 right-1/4 opacity-10"
-        style={{ x: parallaxX3, y: parallaxY3 }}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 4 }}
-          className="relative"
-        >
-          {/* Mini bar chart */}
-          <div className="flex items-end gap-1">
-            {[3, 7, 4, 8, 5, 6, 9].map((height, i) => (
-              <motion.div
-                key={i}
-                className="bg-primary/20 w-2 rounded-t-sm"
-                style={{ height: `${height * 2}px` }}
-                initial={{ scaleY: 0 }}
-                animate={{ scaleY: 1 }}
-                transition={{ duration: 0.5, delay: 4 + i * 0.1 }}
-              />
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
+    
 
       <motion.div
-        className="absolute bottom-1/3 left-1/4 opacity-8"
+        className="absolute hidden bottom-1/3 left-1/4 opacity-8"
         style={{ x: parallaxX1, y: parallaxY1 }}
       >
         <motion.div
