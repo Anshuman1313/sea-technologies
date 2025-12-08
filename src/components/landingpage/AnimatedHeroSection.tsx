@@ -16,14 +16,17 @@ export function AnimatedHeroSection() {
 
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.8]);
-
+  const words = ["Vision", "Dream", "Future"];
   return (
     <section
       ref={containerRef}
-      className="min-h-screen  flex items-center justify-center px-6 py-12 bg-gradient-to-b from-background to-background/50 relative overflow-hidden"
+      className="
+      max-md:min-h-screen max-md:p-20
+      md:min-h-[90vh]
+      justify-center md:pt-25
+       bg-gradient-to-b from-background to-background/50 relative overflow-hidden"
     >
       <BackgroundGraphics />
-      {/* <OceanLinesBackground/> */}
       <motion.div
         className="max-w-4xl mx-auto text-center space-y-8 relative z-10"
         style={{ y, opacity }}
@@ -32,14 +35,14 @@ export function AnimatedHeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6 "
+          className="space-y-8 "
         >
-          <div className="space-y-4">
+          <div className="space-y-6 ">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/60 border border-border/50 backdrop-blur-sm"
             >
               <div className="w-2 h-2 max-md:bg-blue-600 bg-blue-800 rounded-full animate-pulse"></div>
               <span className="text-sm text-muted-foreground">AI-Powered IT Solutions</span>
@@ -53,7 +56,7 @@ export function AnimatedHeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-6xl lg:text-7xl tracking-tight text-foreground"
+              className="text-5xl   md:text-6xl lg:text-7xl tracking-tight text-foreground"
             >
               Transform Your Vision Into{" "}
               <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
@@ -100,7 +103,7 @@ export function AnimatedHeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="px-8 cursor-pointer py-3 text-base border-2 hover:border-primary/50 transition-all duration-300"
+              className="px-8 cursor-pointer bg-background py-3 text-base border-2 hover:border-primary/50 transition-all duration-300"
             >
               <span className="sr-only">Read about Sea Technologies’ company story and journey</span>
               Learn More
@@ -108,16 +111,16 @@ export function AnimatedHeroSection() {
           </Link>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
           className="pt-12 relative"
         >
-          <div className="text-lg md:text-2xl font-semibold text-gray-700 bg-white absolute inset-x-0 md:mt-15 ">
+          {/* <div className="text-lg md:text-2xl font-semibold text-gray-700 bg-transparent absolute inset-x-0 md:mt-15 ">
             Trusted by innovative companies worldwide
-          </div>
-        </motion.div>
+          </div> */}
+        {/* </motion.div> */} 
       </motion.div>
     </section>
   );

@@ -40,6 +40,11 @@ const LogoSection = () => {
     }, []);
 
     return (
+        <>
+        
+         <div className="text-lg md:text-3xl font-bold text-gray-900 my-10 text-center">
+            Trusted by innovative companies worldwide
+          </div>
         <div className="flex flex-col md:w-full   ">
             <div className="grid grid-cols-2 md:grid-cols-4 ">
                 {visibleNumbers.map((num:any,i:any) => (
@@ -89,6 +94,7 @@ const LogoSection = () => {
 
             </div>
         </div>
+         </>
     );
 };
 

@@ -1,8 +1,6 @@
 "use client";
 import React, { ReactElement, useEffect, useRef } from "react";
 import gsap from "gsap";
-import GradientText from "./GradientText";
-import { ShimmeringText } from "./Shimmering-text";
 
 export default function BlurryCursorSection() {
     const mouse = useRef({ x: 0, y: 0 });
