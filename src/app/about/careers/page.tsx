@@ -8,8 +8,32 @@ export const metadata: Metadata = {
 
 // Sample job openings data - replace with your actual job listings
 const jobOpenings = [
-{
+  {
   id: 1,
+  title: 'Career Kickstart Program',
+  department: 'Training & Development',
+  location: 'Onsite',
+  type: 'Full-time',
+  experience: 'Fresher / Graduate',
+  description: 'A structured program designed for graduates to start their career path in various technology and business domains.',
+  requirements: [
+    'Must be a graduate',
+    'Strong willingness to learn and upskill',
+    'Ability to work in a fast-paced environment',
+    'Good communication and problem-solving skills'
+  ],
+  technologies: [
+    'AI / ML',
+    'React JS',
+    'Dot Net',
+    'Angular',
+    'Python, Gen AI',
+    'Business Analyst',
+    'Business Development Executive'
+  ]
+},
+{
+  id: 2,
   title: '.NET Developer',
   department: 'Engineering',
   location: 'Onsite',
@@ -24,7 +48,7 @@ const jobOpenings = [
   ]
 },
 {
-  id: 2,
+  id: 3,
   title: 'SQL Developer',
   department: 'Engineering',
   location: 'Onsite',
@@ -39,7 +63,7 @@ const jobOpenings = [
   ]
 },
 {
-  id: 3,
+  id: 4,
   title: 'Business Development Executive (Evening Shift)',
   department: 'Sales',
   location: 'Onsite',
@@ -54,7 +78,7 @@ const jobOpenings = [
   ]
 },
 {
-  id: 4,
+  id: 5,
   title: 'Python Developer (AI/ML)',
   department: 'Engineering',
   location: 'Onsite',
