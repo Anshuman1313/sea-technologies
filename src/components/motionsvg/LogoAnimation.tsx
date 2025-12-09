@@ -44,7 +44,7 @@ export default function LogoAnimation() {
         return (
           <motion.span
             key={idx}
-            className={`inline-block   ${inSEA ? 'text-black' : inTECH ? 'text-blue-400' : ''} ${activated && isS && ' m-0' }`}
+            className={`inline-block   ${inSEA ? 'text-blue-400' : inTECH ? 'text-white' : ''} ${activated && isS && ' m-0' }`}
             initial={false}
             animate={{
               opacity: activated && shouldFade ? 0 : 1,

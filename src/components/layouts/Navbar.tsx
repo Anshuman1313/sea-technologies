@@ -6,6 +6,7 @@ import { X, Menu, ChevronDown } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ModeToggle } from '../theme/ToggleTheme';
 import LogoAnimation from '../motionsvg/LogoAnimation';
+import { Logo1 } from './Logo1';
 
 interface DropdownItem {
     label: string;
@@ -130,7 +131,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className={`  ${scrolled ? "bg-white/80  "  : "bg-white/10 "} border-b-[1px] border-neutral-200  backdrop-blur-md  sticky top-0 z-50    transition-all duration-300`}>
+        <nav className={`  ${scrolled ? "bg-gray-900/80  "  : "bg-gray-900 "} border-b-[1px] border-neutral-200  backdrop-blur-md  sticky top-0 z-50    transition-all duration-300`}>
             <div className={`mx-auto px-5 sm:px-6 lg:px-8  `}>
                 <div className="flex justify-between items-center h-13 lg:h-15 lg:px-3 ">
                     {/* Logo */}
@@ -139,12 +140,13 @@ const Navbar: React.FC = () => {
                             href="/"
                             className={`font-bold  tracking-wide text-black transition-all duration-300`}
                         >
-                           <div className='hidden  lg:block'>
-                            
+                           <div className='max-lg:hidden lg:flex justify-center items-center'>
+                            <Logo1 className= "size-14"/>
                             <LogoAnimation/>
                             </div>
-                            <div className='lg:hidden text-xl'>
-                                <span>SEA</span> <span className='text-blue-400'> TECHNOLOGIES</span>
+                            <div className='flex justify-center items-center lg:hidden text-xl'>
+                                 <Logo1 className= "size-10"/>
+                                <span className='text-blue-400'>SEA</span> <span className='text-white'> TECHNOLOGIES</span>
                             </div>
                         </Link>
                     </div>
@@ -165,13 +167,13 @@ const Navbar: React.FC = () => {
                                     {item.href ? (
                                         <Link
                                             href={item.href}
-                                            className="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                            className="text-white hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200"
                                         >
                                             {item.label}
                                         </Link>
                                     ) : (
                                         <button
-                                            className="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium flex items-center transition-colors duration-200"
+                                            className="text-white hover:text-white px-3 py-2 text-sm font-medium flex items-center transition-colors duration-200"
                                             onClick={() => item.hasDropdown && toggleDropdown(item.label)}
                                         >
                                             {item.label}
@@ -227,7 +229,7 @@ const Navbar: React.FC = () => {
                            {/* <Link href="/contactus"><Button >Start</Button></Link> */}
                         <button
                             onClick={toggleMobileMenu}
-                            className="text-gray-700 hover:text-black focus:outline-none focus:text-black p-2"
+                            className="text-white hover:text-gray-100 focus:outline-none focus:text-gray-100 p-2"
                             aria-label="Toggle mobile menu"
                         >
                             {isMobileMenuOpen ? (
