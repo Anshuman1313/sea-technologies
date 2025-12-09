@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Logo1 } from "./Logo1";
 
 const Footer: React.FC = () => {
   const footerSections = [
@@ -49,9 +50,11 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="text-2xl font-bold text-white tracking-wide"
+              className="text-2xl flex justify-left items-center font-bold text-white tracking-wide"
             >
-              SEA TECHNOLOGIES
+                <Logo1 className= "size-12"/>
+              <span><span className="text-blue-400">SEA</span> TECHNOLOGIES</span>
+              
             </Link>
 
             <p className="mt-4 text-sm text-gray-400 leading-relaxed max-w-md">
