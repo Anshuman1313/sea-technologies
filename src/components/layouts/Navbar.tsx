@@ -140,13 +140,14 @@ const Navbar: React.FC = () => {
                             href="/"
                             className={`font-bold  tracking-wide text-black transition-all duration-300`}
                         >
-                           <div className='max-lg:hidden lg:flex justify-center items-center'>
+                           <div className='max-lg:hidden lg:flex justify-center items-center text-[25px]'>
                             <Logo1 className= "size-14"/>
-                            <LogoAnimation/>
+                                <span className='text-white '>SEA</span> <span className='text-blue-400 md:pl-1'> TECHNOLOGIES</span>
+
                             </div>
                             <div className='flex justify-center items-center lg:hidden text-xl'>
                                  <Logo1 className= "size-10"/>
-                                <span className='text-blue-400'>SEA</span> <span className='text-white'> TECHNOLOGIES</span>
+                                <span className='text-white'>SEA</span> <span className='text-blue-400'> TECHNOLOGIES</span>
                             </div>
                         </Link>
                     </div>
@@ -157,7 +158,7 @@ const Navbar: React.FC = () => {
                             {navItems.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="relative group"
+                                    className="relative group sm:shrink lg:shrink-0"
                                     ref={(el) => {
                                         if (item.hasDropdown) {
                                             dropdownRefs.current[item.label] = el;
@@ -218,7 +219,7 @@ const Navbar: React.FC = () => {
                         </div>
                         <Link
                             href="/contactus"
-                            className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 inline-block"
+                            className="bg-blue-500  sm:shrink md:px-0 lg:shrink-0 text-white lg:px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200 inline-block"
                         >
                             Free Consultancy
                         </Link>

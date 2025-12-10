@@ -19,8 +19,8 @@ export const Logo1 = ({className = "size-40"}:Logo1Props) => {
       <motion.g className='pb-4'
       >
 
-      <path fill="white" d={upper_S} fillOpacity="1" fillRule="nonzero"></path>
-      <path d={lower_S} fillOpacity="1" fillRule="nonzero" style={{fill: "#3b82f6"}}></path>
+      <path fill="#3b82f6" d={upper_S} fillOpacity="1" fillRule="nonzero"></path>
+      <path d={lower_S} fillOpacity="1" fillRule="nonzero" style={{fill: "white"}}></path>
       </motion.g>
       
       

@@ -52,8 +52,8 @@ const Footer: React.FC = () => {
               href="/"
               className="text-2xl flex justify-left items-center font-bold text-white tracking-wide"
             >
-                <Logo1 className= "size-12"/>
-              <span><span className="text-blue-400">SEA</span> TECHNOLOGIES</span>
+                <Logo1 className= "size-15 "/>
+              <span className="text-blue-400"><span className="text-white">SEA</span> TECHNOLOGIES</span>
               
             </Link>
 
